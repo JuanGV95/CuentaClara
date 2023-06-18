@@ -1,4 +1,30 @@
-/* Resteo */
 * {
   margin: 0;
   padding: 0; }
+
+.bg-body-tertiary {
+  background-color: #292929 !important; }
+
+.navbar-brand {
+  color: #F5F5F5;
+  font-size: 30px;
+  padding: 0; }
+  .navbar-brand:hover {
+    color: #ffffff;
+    opacity: 1; }
+
+.navbar .btn-light {
+  color: #F5F5F5;
+  filter: brightness(10); }
+
+.navbar .nav-item {
+  padding: 0 10px; }
+  .navbar .nav-item .nav-link {
+    color: #F5F5F5;
+    opacity: 0.5;
+    font-size: 20px; }
+    .navbar .nav-item .nav-link:hover {
+      color: #ffffff;
+      opacity: 1; }
+
+/* FIN HEADER | Boostrap Nav */
