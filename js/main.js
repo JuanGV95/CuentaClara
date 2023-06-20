@@ -53,9 +53,7 @@ const nuevoIngreso3 = new Ingresos(3, "Venta portatil", 400);
 listaIngresos.push(nuevoIngreso1, nuevoIngreso2, nuevoIngreso3);
 /* ejemplos para los ingresos */
 
-/* OPERACIONES */
 
-/* OPERACIONES */
 //El Menu fue realizado en base al ejemplo visto en clase 
 function menu() {
     let salida = false;
@@ -97,19 +95,19 @@ function menu() {
                 break
         }
     } while (!salida);
-}
+};
 menu();
 
 //Esta funcion nos dice cual es el valor actual en la cuenta que por defecto es 0 cero
 function revSaldo() {
     alert(`Su saldo actual es de ${balance} USD`);
-}
+};
 //Con esta funcion podemos consignar un valor a nuesta cuenta inicial y lo actualiza con su nuevo valor
 function baseMensual() {
     let valorIng = parseInt(prompt("Ingresa tu sueldo mensual"));
     balance = valorIng + balance;
     alert(`Su nuevo saldo es de $${balance} USD`);
-}
+};
 
 function ingreso() {
     let nombraIngreso = prompt("¿De dónde viene tu ingreso ocacional?")
@@ -122,7 +120,7 @@ function ingreso() {
 tu nuevo saldo es: $${balance}
     `);
     listaIngresos.push(nuevoIngreso);
-}
+};
 
 function tipoDeCuenta() {
     let cuentaAgregada = parseInt(prompt(`Escoge el tipo de cuenta que deseas agregar
@@ -154,7 +152,6 @@ function tipoDeCuenta() {
         let nombrarCuenta = prompt("Nombra tu ahorro");
         let cuotasPago = parseInt(prompt("¿En cuántas cuotas quieres lograr tu meta?"))
         let valorCuenta = parseInt(prompt("¿Cuánto quieres ahorrar?"));
-
         const nuevaCuenta = new Cuentas(listaCuentas.length + 1, cuentaTipo, nombrarCuenta, cuotasPago, valorCuenta);
         //pusheamos al array:
         listaCuentas.push(nuevaCuenta);
@@ -180,7 +177,7 @@ function tipoDeCuenta() {
         listaCuentas.push(nuevaCuenta);
     }
 
-}
+};
 
 function verCuentas(array) {
     console.log(`Tus cuentas son: `)
@@ -210,7 +207,7 @@ function verCuentas(array) {
             alert("Elige una opción del menú");
             verCuentas();
     }
-}
+};
 
 function verIngresos(array) {
     console.log(`Tus ingresos fueron: `)
@@ -240,7 +237,7 @@ function verIngresos(array) {
             alert("Elige una opción del menú");
             verIngresos();
     }
-}
+};
 /* FILTROS */
 //buscar cuenta
 function buscarCuenta(array) {
@@ -253,7 +250,7 @@ function buscarCuenta(array) {
     } else {
         verCuentas(busqueda);
     }
-}
+};
 //buscar Ingreso
 function buscarIngreso(array) {
     let buscaIngresos = prompt("Elige el nombre del que quieras filtrar");
@@ -265,19 +262,19 @@ function buscarIngreso(array) {
     } else {
         verIngresos(busqueda);
     }
-}
+};
 //ordenar cuentas
 function ordenarMenorMayor(array){
  const menorMayor = [].concat(array);
  menorMayor.sort((elem1 , elem2) => elem1.valor - elem2.valor)
  verCuentas(menorMayor);
-}
+};
 
 function ordenarMayorMenor(array){
     const mayorMenor = [].concat(array);
     mayorMenor.sort((elem1 , elem2) => elem2.valor - elem1.valor)
     verCuentas(mayorMenor);
-}
+};
 
 function ordenAlfabetico(array){
     const arrayAlfabetico = [].concat(array)
@@ -291,19 +288,19 @@ function ordenAlfabetico(array){
         return 0
     })
     verCuentas(arrayAlfabetico)
-}
+};
 //ordenar ingresos
 function ordenarIngresoMenorMayor(array){
     const menorMayor = [].concat(array);
     menorMayor.sort((elem1 , elem2) => elem1.valorIngreso - elem2.valorIngreso)
     verIngresos(menorMayor);
-   }
+   };
    
    function ordenarIngresoMayorMenor(array){
        const mayorMenor = [].concat(array);
        mayorMenor.sort((elem1 , elem2) => elem2.valorIngreso - elem1.valorIngreso)
        verIngresos(mayorMenor);
-   }
+   };
    
    function ordenIngresoAlfabetico(array){
        const arrayAlfabetico = [].concat(array)
@@ -317,7 +314,7 @@ function ordenarIngresoMenorMayor(array){
            return 0
        });
        verIngresos(arrayAlfabetico)
-   }
+   };
 //eliminar cuentas
 function eliminar(array){
     let eliminarID = parseInt(prompt("Elige el ID de la cuenta a eliminar"))
@@ -328,7 +325,7 @@ function eliminar(array){
     console.log(indice);
     array.splice(indice, 1)
     verCuentas(array);
-}
+};
 //eliminar ingreso
 function eliminarIngreso(array){
     let eliminarID = parseInt(prompt("Elige el ID del ingreso a eliminar"))
@@ -339,7 +336,7 @@ function eliminarIngreso(array){
     console.log(indice);
     array.splice(indice, 1)
     verIngresos(array);
-}
+};
 function ordenar(array){
     let opcion = parseInt(prompt(`
     1 - Ordenar de menor a mayor
@@ -364,7 +361,7 @@ function ordenar(array){
                 alert("Elige una opción válida")
                 ordenar();           
     }
-}
+};
 //ordenar Ingresos
 function ordenarIngreso(array){
     let opcion = parseInt(prompt(`
@@ -390,5 +387,7 @@ function ordenarIngreso(array){
                 alert("Elige una opción válida");
                 ordenarIngreso();          
     }
-}
+};
 /* FILTROS */
+/* OPERACIONES */
+/* OPERACIONES */
