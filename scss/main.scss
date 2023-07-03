@@ -1,6 +1,9 @@
-
+//Variables Css
+@import "./sections/utilities/extend.scss";
 // Resteo 
 @import "./sections/utilities/reset.scss";
+//Extend
 
 //Sections
 @import "./sections/header.scss";
+@import "./sections/index.scss";

@@ -1,8 +1,15 @@
-//este es un ejemplo que quiero desarrollar para mi proyecto final
-//la idea es un aplicativo con el que se pueda llevar registro de ingresos
-//egresos y mas adelante planeo añadir funciones para control de gastos
-//let cuenta es el valor general de la cuenta
-let balance = 0;
+
+let balance = 3000;
+let fechaActual = document.getElementById("fecha");
+let ingresosActuales = document.getElementsByClassName("info__ingreso")
+
+console.log(ingresosActuales)
+//fecha
+const hoy = new Date();
+fechaActual.innerHTML = hoy.toDateString();
+console.log(fecha);
+
+
 
 /*constructores*/
 class Cuentas {
@@ -34,7 +41,7 @@ function nombre() {
 function saludar(persona) {
     alert(`Bienvenido/a ${persona} ¿Qué deseas hacer?`);
 }
-nombre();
+//nombre();
 /*Arrays*/
 const listaCuentas = [];
 const listaIngresos = [];
@@ -96,11 +103,11 @@ function menu() {
         }
     } while (!salida);
 };
-menu();
+//menu();
 
 //Esta funcion nos dice cual es el valor actual en la cuenta que por defecto es 0 cero
 function revSaldo() {
-    alert(`Su saldo actual es de ${balance} USD`);
+    alert(`Su saldo actual es de ${balance} USD`); 
 };
 //Con esta funcion podemos consignar un valor a nuesta cuenta inicial y lo actualiza con su nuevo valor
 function baseMensual() {

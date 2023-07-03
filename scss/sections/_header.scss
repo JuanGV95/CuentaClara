@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    height: 64px;
+    padding: 8px 20px;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    background-color: $color-gris;
+    h1{
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 0; 
+        font-size: 24px;
+        letter-spacing: 0.5px;
+    }
+    .info {
+        display: flex;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+
+        #fecha {
+            color: $color-blanco; 
+            border-right: 1px solid $color-blanco;
+            padding-right: 20px;
+        }
+        &__ingreso{   
+            font-size: 16px;
+        }
+    }
+}
