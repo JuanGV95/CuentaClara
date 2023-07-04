@@ -24,7 +24,8 @@ body {
     flex-direction: column;
     flex: 1 0 0;
     font-size: 24px;
-    letter-spacing: 0.5px; }
+    letter-spacing: 0.5px;
+    margin: 0; }
   .header .info {
     display: flex;
     padding: 0px 20px;
@@ -55,16 +56,20 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      flex: 1 0 0; }
+      flex: 1 0 0;
+      gap: 0.5rem; }
       .main .usuario__bienvenida h2 {
         font-size: 24px;
         margin: 0; }
       .main .usuario__bienvenida p {
         font-size: 16px;
         color: #D9D9D980;
-        margin: 0; }
+        margin: 0;
+        font-weight: 300; }
     .main .usuario__boton {
+      font-size: 14px;
       padding: 10px 24px 10px 16px;
+      border: none;
       border-radius: 100px;
       background-color: #7ECA9C;
       color: #1C1427; }
@@ -74,6 +79,8 @@ body {
     align-items: flex-start;
     gap: 20px;
     align-self: stretch; }
+    .main .infoPrincipal p {
+      margin: 0; }
     .main .infoPrincipal__cuenta {
       display: flex;
       align-items: flex-start;
@@ -97,3 +104,77 @@ body {
           margin: 0;
           font-size: 14px;
           color: #D9D9D980; }
+  .main .gestion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch; }
+    .main .gestion p {
+      font-size: 16px; }
+    .main .gestion .cajaBusqueda {
+      display: flex;
+      width: 100%;
+      gap: 20px; }
+      .main .gestion .cajaBusqueda .busqueda {
+        display: flex;
+        padding: 4px 4px 4px 20px;
+        align-items: center;
+        border-radius: 100px;
+        gap: 4px;
+        flex: 1 0 0;
+        align-self: stretch;
+        background-color: #40394A; }
+        .main .gestion .cajaBusqueda .busqueda #caja {
+          display: flex;
+          font-size: 14px;
+          height: 48px;
+          align-items: center;
+          gap: 10px;
+          flex: 1 0 0;
+          align-self: stretch;
+          background-color: #40394A;
+          border: none; }
+        .main .gestion .cajaBusqueda .busqueda ::placeholder {
+          color: #FBFBFB; }
+        .main .gestion .cajaBusqueda .busqueda #btnBusqueda {
+          display: flex;
+          width: 48px;
+          height: 48px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          background-color: #40394A;
+          border: none;
+          border-radius: 20px; }
+      .main .gestion .cajaBusqueda #filtros {
+        display: flex;
+        padding: 10px 16px 10px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        width: 105px;
+        background-color: #1C1427;
+        border: none; }
+        .main .gestion .cajaBusqueda #filtros p {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 300; }
+    .main .gestion .listaDatos {
+      display: flex;
+      padding: 20px;
+      gap: 10px;
+      align-self: stretch;
+      list-style: none; }
+      .main .gestion .listaDatos li {
+        border: 1px solid red;
+        display: flex;
+        justify-content: flex-start;
+        flex: 1 0 0;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        color: #D9D9D980; }
+    .main .gestion .cajaCuentas {
+      width: 100%; }

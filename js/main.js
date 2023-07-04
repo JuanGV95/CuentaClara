@@ -1,13 +1,12 @@
 
-let balance = 3000;
+let balance = 300;
 let fechaActual = document.getElementById("fecha");
-let ingresosActuales = document.getElementsByClassName("info__ingreso")
-
-console.log(ingresosActuales)
+let ingresoCuenta = document.getElementById("info__ingreso");
+ingresoCuenta.innerHTML = `$${balance} USD`;
 //fecha
 const hoy = new Date();
 fechaActual.innerHTML = hoy.toDateString();
-console.log(fecha);
+
 
 
 

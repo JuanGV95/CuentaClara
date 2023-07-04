@@ -17,6 +17,7 @@
             flex-direction: column;
             align-items: flex-start;
             flex: 1 0 0;
+            gap: 0.5rem;
 
             h2 {
                 font-size: 24px;
@@ -27,11 +28,14 @@
                 font-size: 16px;
                 color: $color-grisesito;
                 margin: 0;
+                font-weight: 300;
             }
         }
 
         &__boton {
+            font-size: 14px;
             padding: 10px 24px 10px 16px;
+            border: none;
             border-radius: 100px;
             background-color: $color-verde;
             color: $color-negro;
@@ -45,12 +49,17 @@
         gap: 20px;
         align-self: stretch;
 
+        p {
+            margin: 0;
+        }
+
         &__cuenta {
             display: flex;
             align-items: flex-start;
             gap: 25px;
             align-self: stretch;
-            div{
+
+            div {
                 display: flex;
                 height: 113px;
                 padding: 20px;
@@ -61,17 +70,120 @@
                 border-radius: 8px;
                 flex: 1 0 0;
                 background-color: $color-cajas;
-                h2{  
+
+                h2 {
                     font-size: 24px;
                     margin: 0;
-                    
+
                 }
-                p{
+
+                p {
                     margin: 0;
                     font-size: 14px;
                     color: $color-grisesito;
                 }
             }
+        }
+    }
+
+    .gestion {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        align-self: stretch;
+
+        p {
+            font-size: 16px;
+        }
+
+        .cajaBusqueda {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+
+            .busqueda {
+                display: flex;
+                padding: 4px 4px 4px 20px;
+                align-items: center;
+                border-radius: 100px;
+                gap: 4px;
+                flex: 1 0 0;
+                align-self: stretch;
+                background-color: $color-gris;
+
+                #caja {
+                    display: flex;
+                    font-size: 14px;
+                    height: 48px;
+                    align-items: center;
+                    gap: 10px;
+                    flex: 1 0 0;
+                    align-self: stretch;
+                    background-color: $color-gris;
+                    border: none;
+                }
+
+                ::placeholder {
+                    color: $color-blanco;
+                }
+
+                #btnBusqueda {
+                    display: flex;
+                    width: 48px;
+                    height: 48px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: $color-gris;
+                    border: none;
+                    border-radius: 20px;
+                }
+
+            }
+
+            #filtros {
+                display: flex;
+                padding: 10px 16px 10px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+                width: 105px;
+                background-color: $color-negro;
+                border: none;
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+
+            }
+        }
+
+        .listaDatos {
+            display: flex;
+            padding: 20px;
+            gap: 10px;
+            align-self: stretch;
+            list-style: none;
+
+            li {
+                border: 1px solid red;
+                display: flex;
+                justify-content: flex-start;
+                flex: 1 0 0;
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 0.5px;
+                color: $color-grisesito;
+            }
+        }
+
+        .cajaCuentas {
+            width: 100%;
         }
     }
 }
