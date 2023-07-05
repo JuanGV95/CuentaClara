@@ -90,11 +90,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
         align-self: stretch;
 
         p {
             font-size: 16px;
+            font-weight: 300;
         }
 
         .cajaBusqueda {
@@ -162,28 +162,106 @@
 
             }
         }
-
-        .listaDatos {
-            display: flex;
-            padding: 20px;
-            gap: 10px;
-            align-self: stretch;
-            list-style: none;
-
-            li {
-                border: 1px solid red;
+            .listaDatos {
                 display: flex;
-                justify-content: flex-start;
-                flex: 1 0 0;
-                font-size: 14px;
-                font-weight: 300;
-                letter-spacing: 0.5px;
-                color: $color-grisesito;
-            }
-        }
+                padding: 20px 0px 10px 0;
+                gap: 10px;
+                align-self: stretch;
+                list-style: none;
+                margin: 0;
+                .listaDatos2 {
+                    display: flex;
+                    align-self: stretch;
+                    padding: 0;
+                    flex: 1 0 0;
+                }
 
-        .cajaCuentas {
-            width: 100%;
+                li {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex: 2 0 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                    letter-spacing: 0.5px;
+                    color: $color-grisesito;
+                }
+            }
+            .cajaCuentas {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                align-self: stretch;
+                #gestionCuentas{
+                    background-color: $color-cajas;
+                    border-radius: 8px;
+                    display: flex;
+                    padding: 20px;
+                    align-items: center;
+                    gap: 20px;
+                    align-self: stretch;
+                    img{
+                        display: flex;
+                        width: 40px;
+                        padding: 3.333px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 10px;
+                        flex: 0.7 0 0;
+                        
+                        h2, p{
+                            font-size: 14px;
+                            margin: 0;
+                            font-weight: 300;
+                        }
+                        p{
+                            color:$color-grisesito;
+                        }
+                    }
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1 0 0;
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin: 0;
+                    }
+                    #cuadroPendiente{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex: 1 0 0;
+                        p{
+                            display: flex;
+                            width: 107px;
+                            padding: 10px 20px;
+                            align-items: center;
+                            color: $color-rojo;
+                            background-color: $color-rojofondo;
+                        }
+                    }
+                    #btnGestionar{
+                        display: flex;
+                        padding: 10px 16px;
+                        justify-content: center;
+                        align-items: center;
+                  
+                        align-self: stretch;
+                        border: none;
+                        border-radius: 20px;
+                        color: $color-verdeClaro;
+                        font-weight: 300;
+                        font-size: 14px;
+                        background-color: $color-gris;
+                    }
+                }
         }
     }
 }
