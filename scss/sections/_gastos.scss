@@ -1,0 +1,118 @@
+.mainGastos{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: $color-negro;
+    .seccionGastos {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        align-self: stretch;
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1 0 0;
+            gap: 0.5rem;
+
+            h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 16px;
+                color: $color-grisesito;
+                margin: 0;
+                font-weight: 300;
+            }
+        }
+
+        &__boton {
+            font-size: 14px;
+            padding: 10px 24px 10px 16px;
+            border: none;
+            border-radius: 100px;
+            background-color: $color-verde;
+            color: $color-negro;
+        }
+    }
+    .gestionGastos{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        .cajaBusquedaGastos {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+
+            .busquedaGastos {
+                display: flex;
+                padding: 4px 4px 4px 20px;
+                align-items: center;
+                border-radius: 100px;
+                gap: 4px;
+                flex: 1 0 0;
+                align-self: stretch;
+                background-color: $color-gris;
+
+                #cajaGastos {
+                    display: flex;
+                    font-size: 14px;
+                    height: 48px;
+                    align-items: center;
+                    gap: 10px;
+                    flex: 1 0 0;
+                    align-self: stretch;
+                    background-color: $color-gris;
+                    border: none;
+                    outline: none;
+                }
+
+                ::placeholder {
+                    color: $color-blanco;
+                    font-weight: 300;
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                }
+
+                #btnBusquedaGastos {
+                    display: flex;
+                    width: 48px;
+                    height: 48px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    background-color: $color-gris;
+                    border: none;
+                    border-radius: 20px;
+                }
+
+            }
+
+            #filtroGastos {
+                display: flex;
+                padding: 10px 16px 10px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                align-self: stretch;
+                width: 105px;
+                background-color: $color-negro;
+                border: none;
+
+                p {
+                    margin: 0;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+
+            }
+        }
+    }
+}
