@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ingresos</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>CuentaClara</h1>
+        <section class="info">
+            <div id="fecha"></div>
+            <div id="info__ingreso">
+            </div>
+        </section>
+        <img src="../assets/img/icon-persona.svg" alt="Persona">
+    </header>
+    <main class="mainIngreso">
+        <section class="seccionIngreso">
+            <div class="seccionIngreso__info">
+                <h2>Ingresos</h2>
+                <p>Aquí podrás organizar tus ingresos fijos y ocasionales</p>
+            </div>
+            <button class="seccionIngreso__boton">+ Agregar ingreso</button>
+        </section>
+        <section class="gestionIngreso">
+            <article class="cajaBusquedaIngreso">
+                <article class="busquedaIngreso">
+                    <input type="text" name="buscar" id="cajaIngreso" placeholder="Buscar">
+                    <button id="btnBusquedaIngreso">
+                        <img src="../assets/img/search.svg" alt="icono-Buscador">
+                    </button>
+                </article>
+                <button id="filtroIngreso">
+                    <img src="../assets/img/iconfilter.svg" alt="Icono para filtrar cuentas">
+                    <p>Ordenar</p>
+                </button>
+            </article>
+            <section class="boxIngreso">
+                <section id="cardIngreso">
+                    <div class="cardIconoIngreso"><img src="../assets/img/officeBagIcon.svg"
+                            alt="Icono de alcancia"><img src="../assets/img/trashIcon.svg" alt="icono para borrar"
+                            id="borrarCard"></div>
+                    <h2>Sueldo fijo</h2>
+                    <p>Mensual</p>
+                    <h2 class="montoPagoIngreso">$ 300 USD</h2>
+                </section>
+
+            </section>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <nav class="navegador">
+            <a href="../index.html" class="navegador__sections">
+                <img src="../assets/img/homeicon.svg" alt="Navegador a Index">
+                <p>Inicio</p>
+            </a>
+            <a href="./gastos.html" class="navegador__sections">
+                <img src="../assets/img/ingressicon.svg" alt="Navegador a Gastos">
+                <p>Gastos</p>
+            </a>
+            <a href="./ingresos.html" class="navegador__sections active">
+                <img src="../assets/img/dollaricon.svg" alt="Navegador a Ingresos">
+                <p>Ingresos</p>
+            </a>
+        </nav>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
