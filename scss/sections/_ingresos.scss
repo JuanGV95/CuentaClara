@@ -38,7 +38,10 @@
             border: none;
             border-radius: 100px;
             background-color: $color-verde;
-            color: $color-negro;
+            a{
+                text-decoration: none;
+                color: $color-negro;
+            }
         }
     }
 

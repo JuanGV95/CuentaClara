@@ -13,6 +13,12 @@
         font-size: 24px;
         letter-spacing: 0.5px;
         margin: 0;
+        
+        a{
+            font-weight: 300;
+            color: $color-blanco;
+            text-decoration: none;
+        }
     }
     .info {
         display: flex;

@@ -6,27 +6,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style.css">
-    <title>Agregar ingresos</title>
+    <title>Agregar gastos</title>
 </head>
 <body>
     <header class="header">
         <div class="seccion-agregar-ingreso">
-        <a href="../pages/ingresos.html"><img src="../assets/img/icons-arrow-back.svg" alt="Flecha de volver atras" id="volverAtrasFlecha"></a>
-        <h1>Agregar ingreso</h1>
+        <a href="../pages/gastos.html"><img src="../assets/img/icons-arrow-back.svg" alt="Flecha de volver atras" id="volverAtrasFlecha"></a>
+        <h1>Agregar gasto</h1>
         </div>
     </header>
     <main class="main-agregar-ingreso">
         <h2>Tipo</h2>
-        <p>Selecciona el tipo de ingreso</p>
-        <section class="agregar-ingresos">
-            <article id="ingreso-ocacional">
-                <img src="../assets/img/dollaricon.svg" alt="Icono de Dollar">
-                <p>Ingreso ocasional</p>
-            </article>
-            <article id="sueldo-fijo">
-                <img src="../assets/img/officeBagIcon.svg" alt="Icono de Dollar">
-                <p>Sueldo fijo</p>
-            </article>
+        <p>Selecciona el tipo de gasto</p>
+        <section class="agregar-gastos">
+            <a href="./crear-meta.html" id="meta-de-ahorro">
+                <img src="../assets/img/pigIcon.svg" alt="Icono de alcancia">
+                <p>Meta de ahorro</p>
+            </a>
+            <a href="./crear-credito.html" id="cuenta-credito">
+                <img src="../assets/img/creditIcon.svg" alt="Icono de tarjeta">
+                <p>Crédito</p>
+            </a>
+            <a href="./crear-otro-tipo.html" id="cuenta-otros">
+                <img src="../assets/img/dotsIcon.svg" alt="Icono de puntos">
+                <p>Otro</p>
+            </a>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

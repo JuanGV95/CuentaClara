@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="seccion-crear">
+        <a href="../pages/gastos.html"><img src="../assets/img/icons-arrow-back.svg" alt="Flecha de volver atras" id="volverAtrasFlecha"></a>
+        <h1>Agregar gasto</h1>
+        <p>Meta de ahorro</p>
+        </div>
+    </header>
+    <main class="main-agregar-ingreso">
+        <h2>Detalles</h2>
+        <p>Completa los campos de abajo para completar la creación de tu gasto</p>
+        <section class="ingreso-datos">
+            <p>Nombre</p>
+            <input type="text" id="nombre-de-meta" placeholder="Nombre de tu meta de ahorro">
+        </section>
+        <section class="ingreso-datos">
+            <p>¿En cuántas cuotas quieres lograr tu meta?</p>
+            <input type="text" id="cuotas-de-meta" placeholder="Número de cuotas">
+        </section>
+        <section class="ingreso-datos">
+            <p>¿Cuánto quieres ahorrar?</p>
+            <input type="text" id="valor-de-meta" placeholder="Valor de tu meta de ahorro">
+        </section>
+        <section class="botones-plantilla">
+            <button class="btn-volver-atras"><a href="./agregar-gasto.html">Volver</a></button>
+            <button id="completar-proceso-meta">Completar proceso</button>
+        </section>
+    </main>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
