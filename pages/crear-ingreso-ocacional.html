@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="seccion-crear">
+            <a href="../pages/ingresos.html"><img src="../assets/img/icons-arrow-back.svg" alt="Flecha de volver atras"
+                    id="volverAtrasFlecha"></a>
+            <h1>Agregar ingreso</h1>
+            <p>Ingreso ocasional</p>
+        </div>
+    </header>
+    <main class="main-agregar-ingreso">
+        <h2>Detalles</h2>
+        <p>Completa los campos de abajo para completar la creación de tu ingreso</p>
+        <section class="ingreso-datos">
+            <p>Nombre de tu ingreso</p>
+            <input type="text" id="nombre-ingreso-oc" placeholder="Nombre de tu ingreso">
+        </section>
+        <section class="ingreso-datos">
+            <p>¿Cuál es el valor del ingreso?</p>
+            <input type="text" id="valor-ingreso-ocacional" placeholder="Valor del ingreso">
+        </section>
+        <section class="seccion-switch">
+            <div class="form-check form-switch">
+                <p>Se repite mensualmente</p>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault switch-ingreso-oc">
+            </div>
+        </section>
+        <section class="botones-plantilla">
+            <button class="btn-volver-atras"><a href="./agregar-ingreso.html">Volver</a></button>
+            <button id="completar-proceso-ingreso-oc">Completar proceso</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

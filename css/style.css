@@ -537,12 +537,12 @@ body {
 
 .main-agregar-ingreso {
   display: flex;
-  padding: 40px;
+  padding: 20px;
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
   background-color: #1C1427;
-  height: 80vh; }
+  height: 100%; }
   .main-agregar-ingreso h1 {
     font-size: 24px;
     font-weight: 500; }
@@ -567,7 +567,8 @@ body {
       gap: 10px;
       border: 1px solid #D9D9D980;
       border-radius: 8px;
-      flex: 1 0 0; }
+      flex: 1 0 0;
+      text-decoration: none; }
       .main-agregar-ingreso .agregar-ingresos #ingreso-ocacional img,
       .main-agregar-ingreso .agregar-ingresos #sueldo-fijo img {
         width: 60px;
@@ -773,6 +774,225 @@ body {
     border-radius: 20px;
     border: none; }
     .main-agregar-ingreso .botones-plantilla #completar-proceso-meta:hover {
+      background-color: #CCFFBD; }
+
+.main-agregar-ingreso .ingreso-datos #nombre-de-otro,
+.main-agregar-ingreso .ingreso-datos #cuotas-de-otro,
+.main-agregar-ingreso .ingreso-datos #valor-de-otro {
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #D9D9D980;
+  background-color: #40394A4D; }
+
+.main-agregar-ingreso .seccion-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  margin-top: 20px; }
+  .main-agregar-ingreso .seccion-switch .form-check {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: center;
+    padding: 0; }
+    .main-agregar-ingreso .seccion-switch .form-check p {
+      color: #FBFBFB;
+      display: flex;
+      font-size: 14px;
+      font-weight: 300;
+      flex: 1 0 0;
+      margin: 0; }
+    .main-agregar-ingreso .seccion-switch .form-check .form-check-input {
+      width: 52px;
+      height: 32px;
+      flex-shrink: 0;
+      border: none;
+      background-color: #D0BCFF; }
+      .main-agregar-ingreso .seccion-switch .form-check .form-check-input .flexSwitchCheckDefault {
+        color: #381E72; }
+  .main-agregar-ingreso .seccion-switch #seccion-btn-tres-true {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0; }
+    .main-agregar-ingreso .seccion-switch #seccion-btn-tres-true .btn-tres-datos {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+      margin: 10px 0; }
+      .main-agregar-ingreso .seccion-switch #seccion-btn-tres-true .btn-tres-datos p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #FBFBFB;
+        margin: 0; }
+      .main-agregar-ingreso .seccion-switch #seccion-btn-tres-true .btn-tres-datos #cuota-de-otro-tres,
+      .main-agregar-ingreso .seccion-switch #seccion-btn-tres-true .btn-tres-datos #tasa-de-otro {
+        display: flex;
+        padding: 15px;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 1px solid #D9D9D980;
+        background-color: #40394A4D; }
+
+.main-agregar-ingreso .botones-plantilla {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #FBFBFB;
+    padding: 10px 24px;
+    border-radius: 20px; }
+    .main-agregar-ingreso .botones-plantilla .btn-volver-atras a {
+      color: #FBFBFB;
+      font-size: 14px;
+      font-weight: 300;
+      text-decoration: none; }
+    .main-agregar-ingreso .botones-plantilla .btn-volver-atras:hover {
+      background-color: #D9D9D980; }
+  .main-agregar-ingreso .botones-plantilla #completar-proceso-otro {
+    padding: 10px 24px;
+    color: #1C1427;
+    background-color: #7ECA9C;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: none; }
+    .main-agregar-ingreso .botones-plantilla #completar-proceso-otro:hover {
+      background-color: #CCFFBD; }
+
+.main-agregar-ingreso .ingreso-datos #nombre-ingreso-oc,
+.main-agregar-ingreso .ingreso-datos #valor-ingreso-ocacional {
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #D9D9D980;
+  background-color: #40394A4D; }
+
+.main-agregar-ingreso .seccion-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  margin-top: 20px; }
+  .main-agregar-ingreso .seccion-switch .form-check {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    align-items: center;
+    padding: 0; }
+    .main-agregar-ingreso .seccion-switch .form-check p {
+      color: #FBFBFB;
+      display: flex;
+      font-size: 14px;
+      font-weight: 300;
+      flex: 1 0 0;
+      margin: 0; }
+    .main-agregar-ingreso .seccion-switch .form-check .form-check-input {
+      width: 52px;
+      height: 32px;
+      flex-shrink: 0;
+      border: none;
+      background-color: #D0BCFF; }
+      .main-agregar-ingreso .seccion-switch .form-check .form-check-input .flexSwitchCheckDefault {
+        color: #381E72; }
+
+.main-agregar-ingreso .botones-plantilla {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #FBFBFB;
+    padding: 10px 24px;
+    border-radius: 20px; }
+    .main-agregar-ingreso .botones-plantilla .btn-volver-atras a {
+      color: #FBFBFB;
+      font-size: 14px;
+      font-weight: 300;
+      text-decoration: none; }
+    .main-agregar-ingreso .botones-plantilla .btn-volver-atras:hover {
+      background-color: #D9D9D980; }
+  .main-agregar-ingreso .botones-plantilla #completar-proceso-ingreso-oc {
+    padding: 10px 24px;
+    color: #1C1427;
+    background-color: #7ECA9C;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: none; }
+    .main-agregar-ingreso .botones-plantilla #completar-proceso-ingreso-oc:hover {
+      background-color: #CCFFBD; }
+
+.main-agregar-ingreso .ingreso-datos #nombre-ingreso-oc,
+.main-agregar-ingreso .ingreso-datos #valor-ingreso-ocacional {
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #D9D9D980;
+  background-color: #40394A4D; }
+
+.main-agregar-ingreso .botones-plantilla {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end; }
+  .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #FBFBFB;
+    padding: 10px 24px;
+    border-radius: 20px; }
+    .main-agregar-ingreso .botones-plantilla .btn-volver-atras a {
+      color: #FBFBFB;
+      font-size: 14px;
+      font-weight: 300;
+      text-decoration: none; }
+    .main-agregar-ingreso .botones-plantilla .btn-volver-atras:hover {
+      background-color: #D9D9D980; }
+  .main-agregar-ingreso .botones-plantilla #actualizar-sueldo-fijo {
+    padding: 10px 24px;
+    color: #1C1427;
+    background-color: #7ECA9C;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: none; }
+    .main-agregar-ingreso .botones-plantilla #actualizar-sueldo-fijo:hover {
       background-color: #CCFFBD; }
 
 .footer {
