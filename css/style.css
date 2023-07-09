@@ -160,20 +160,20 @@ body {
           background-color: #40394A;
           border: none;
           border-radius: 20px; }
-      .main .gestion .cajaBusqueda #filtros {
+      .main .gestion .cajaBusqueda .dropdown {
         display: flex;
-        padding: 10px 16px 10px 12px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        align-self: stretch;
-        width: 105px;
-        background-color: #1C1427;
-        border: none; }
-        .main .gestion .cajaBusqueda #filtros p {
-          margin: 0;
-          font-size: 14px;
-          font-weight: 300; }
+        align-items: center; }
+        .main .gestion .cajaBusqueda .dropdown .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          padding: 10px 16px 10px 12px;
+          border-radius: 20px; }
+          .main .gestion .cajaBusqueda .dropdown .dropdown-toggle p {
+            margin: 0; }
+          .main .gestion .cajaBusqueda .dropdown .dropdown-toggle:hover {
+            background-color: #d9d9d925; }
     .main .gestion .listaDatos {
       display: flex;
       padding: 20px 0px 10px 0;
@@ -343,20 +343,20 @@ body {
           background-color: #40394A;
           border: none;
           border-radius: 20px; }
-      .mainGastos .gestionGastos .cajaBusquedaGastos #filtroGastos {
+      .mainGastos .gestionGastos .cajaBusquedaGastos .dropdown {
         display: flex;
-        padding: 10px 16px 10px 12px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        align-self: stretch;
-        width: 105px;
-        background-color: #1C1427;
-        border: none; }
-        .mainGastos .gestionGastos .cajaBusquedaGastos #filtroGastos p {
-          margin: 0;
-          font-size: 14px;
-          font-weight: 300; }
+        align-items: center; }
+        .mainGastos .gestionGastos .cajaBusquedaGastos .dropdown .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          padding: 10px 16px 10px 12px;
+          border-radius: 20px; }
+          .mainGastos .gestionGastos .cajaBusquedaGastos .dropdown .dropdown-toggle p {
+            margin: 0; }
+          .mainGastos .gestionGastos .cajaBusquedaGastos .dropdown .dropdown-toggle:hover {
+            background-color: #d9d9d925; }
     .mainGastos .gestionGastos .boxGastos {
       display: flex;
       flex-direction: row;
@@ -471,20 +471,20 @@ body {
           background-color: #40394A;
           border: none;
           border-radius: 20px; }
-      .mainIngreso .gestionIngreso .cajaBusquedaIngreso #filtroIngreso {
+      .mainIngreso .gestionIngreso .cajaBusquedaIngreso .dropdown {
         display: flex;
-        padding: 10px 16px 10px 12px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        align-self: stretch;
-        width: 105px;
-        background-color: #1C1427;
-        border: none; }
-        .mainIngreso .gestionIngreso .cajaBusquedaIngreso #filtroIngreso p {
-          margin: 0;
-          font-size: 14px;
-          font-weight: 300; }
+        align-items: center; }
+        .mainIngreso .gestionIngreso .cajaBusquedaIngreso .dropdown .dropdown-toggle {
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          padding: 10px 16px 10px 12px;
+          border-radius: 20px; }
+          .mainIngreso .gestionIngreso .cajaBusquedaIngreso .dropdown .dropdown-toggle p {
+            margin: 0; }
+          .mainIngreso .gestionIngreso .cajaBusquedaIngreso .dropdown .dropdown-toggle:hover {
+            background-color: #d9d9d925; }
     .mainIngreso .gestionIngreso .boxIngreso {
       display: flex;
       flex-direction: row;
@@ -705,6 +705,8 @@ body {
     align-content: flex-end;
     justify-content: space-between;
     align-items: flex-end; }
+    .main-agregar-ingreso .botones-plantilla a {
+      text-decoration: none; }
     .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
       display: flex;
       justify-content: center;
@@ -750,6 +752,8 @@ body {
   align-content: flex-end;
   justify-content: space-between;
   align-items: flex-end; }
+  .main-agregar-ingreso .botones-plantilla a {
+    text-decoration: none; }
   .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
     display: flex;
     justify-content: center;
@@ -828,7 +832,7 @@ body {
       align-items: flex-start;
       gap: 10px;
       align-self: stretch;
-      margin: 10px 0; }
+      margin: 5px 0; }
       .main-agregar-ingreso .seccion-switch #seccion-btn-tres-true .btn-tres-datos p {
         font-size: 14px;
         font-weight: 500;
@@ -852,6 +856,8 @@ body {
   align-content: flex-end;
   justify-content: space-between;
   align-items: flex-end; }
+  .main-agregar-ingreso .botones-plantilla a {
+    text-decoration: none; }
   .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
     display: flex;
     justify-content: center;
@@ -925,6 +931,8 @@ body {
   align-content: flex-end;
   justify-content: space-between;
   align-items: flex-end; }
+  .main-agregar-ingreso .botones-plantilla a {
+    text-decoration: none; }
   .main-agregar-ingreso .botones-plantilla .btn-volver-atras {
     display: flex;
     justify-content: center;
@@ -993,6 +1001,133 @@ body {
     border-radius: 20px;
     border: none; }
     .main-agregar-ingreso .botones-plantilla #actualizar-sueldo-fijo:hover {
+      background-color: #CCFFBD; }
+
+.seccion-crear {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  padding: 8px 10px;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0; }
+
+.main-agregar-ingreso {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: #1C1427;
+  height: 721px; }
+  .main-agregar-ingreso h1 {
+    font-size: 24px;
+    font-weight: 500; }
+  .main-agregar-ingreso p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #D9D9D980; }
+  .main-agregar-ingreso .ingreso-datos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    margin-top: 20px; }
+    .main-agregar-ingreso .ingreso-datos p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #FBFBFB;
+      margin: 0; }
+    .main-agregar-ingreso .ingreso-datos #nombre-registro,
+    .main-agregar-ingreso .ingreso-datos #correo-registro,
+    .main-agregar-ingreso .ingreso-datos #contrasena-registro {
+      display: flex;
+      padding: 15px;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #D9D9D980;
+      background-color: #40394A4D; }
+  .main-agregar-ingreso .botones-registro {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 19px; }
+    .main-agregar-ingreso .botones-registro .btn-volver-atras {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid #FBFBFB;
+      padding: 10px 24px;
+      border-radius: 20px; }
+      .main-agregar-ingreso .botones-registro .btn-volver-atras a {
+        color: #FBFBFB;
+        font-size: 14px;
+        font-weight: 300;
+        text-decoration: none; }
+      .main-agregar-ingreso .botones-registro .btn-volver-atras:hover {
+        background-color: #D9D9D980; }
+    .main-agregar-ingreso .botones-registro #completar-registro-cuenta {
+      padding: 10px 24px;
+      color: #1C1427;
+      background-color: #7ECA9C;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 20px;
+      border: none; }
+      .main-agregar-ingreso .botones-registro #completar-registro-cuenta:hover {
+        background-color: #CCFFBD; }
+
+.main-agregar-ingreso .ingreso-datos #correo-inicio,
+.main-agregar-ingreso .ingreso-datos #contrasena-inicio {
+  display: flex;
+  padding: 15px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #D9D9D980;
+  background-color: #40394A4D; }
+
+.main-agregar-ingreso .botones-registro {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 19px; }
+  .main-agregar-ingreso .botones-registro .btn-volver-atras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #FBFBFB;
+    padding: 10px 24px;
+    border-radius: 20px; }
+    .main-agregar-ingreso .botones-registro .btn-volver-atras a {
+      color: #FBFBFB;
+      font-size: 14px;
+      font-weight: 300;
+      text-decoration: none; }
+    .main-agregar-ingreso .botones-registro .btn-volver-atras:hover {
+      background-color: #D9D9D980; }
+  .main-agregar-ingreso .botones-registro #iniciar-cuenta {
+    padding: 10px 24px;
+    color: #1C1427;
+    background-color: #7ECA9C;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: none; }
+    .main-agregar-ingreso .botones-registro #iniciar-cuenta:hover {
       background-color: #CCFFBD; }
 
 .footer {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credito</title>
+    <title>Registrar cuenta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
@@ -12,33 +12,27 @@
 <body>
     <header class="header">
         <div class="seccion-crear">
-        <a href="../pages/gastos.html"><img src="../assets/img/icons-arrow-back.svg" alt="Flecha de volver atras" id="volverAtrasFlecha"></a>
-        <h1>Agregar gasto</h1>
-        <p>Crédito</p>
+        <h1>CuentaClara</h1>
         </div>
     </header>
     <main class="main-agregar-ingreso">
-        <h2>Detalles</h2>
-        <p>Completa los campos de abajo para completar la creación de tu gasto</p>
+        <h2>Registrarse</h2>
+        <p>En CuentaClara podrás gestionar y mantener claras tus cuentas. Ingresa tu información para ingresar y comenzar esta increible experiencia.</p>
         <section class="ingreso-datos">
             <p>Nombre</p>
-            <input type="text" id="nombre-de-credito" placeholder="Nombre de tu crédito">
+            <input type="text" id="nombre-registro" placeholder="Nombre completo">
         </section>
         <section class="ingreso-datos">
-            <p>Elige las cuotas de tu crédito</p>
-            <input type="text" id="cuotas-de-credito" placeholder="Número de cuotas">
+            <p>Correo electronico</p>
+            <input type="email" id="correo-registro" placeholder="Correo">
         </section>
         <section class="ingreso-datos">
-            <p>¿Cuál es el valor de tu crédito?</p>
-            <input type="text" id="valor-de-credito" placeholder="Valor de tu crédito">
+            <p>Contraseña</p>
+            <input type="password" id="contrasena-registro" placeholder="Contraseña">
         </section>
-        <section class="ingreso-datos">
-            <p>Tasa de interes</p>
-            <input type="text" id="tasa-interes-credito" placeholder="Tasa de interes">
-        </section>
-        <section class="botones-plantilla">
-            <a href="./agregar-gasto.html"><button class="btn-volver-atras">Volver</button></a>
-            <button id="completar-proceso">Completar proceso</button>
+        <section class="botones-registro">
+            <button class="btn-volver-atras"><a href="./inicio-sesion.html">Iniciar sesión</a></button>
+            <button id="completar-registro-cuenta">Registrarse</button>
         </section>
     </main>
    

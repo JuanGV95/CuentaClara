@@ -36,10 +36,18 @@
                         <img src="../assets/img/search.svg" alt="icono-Buscador">
                     </button>
                 </article>
-                <button id="filtroIngreso">
-                    <img src="../assets/img/iconfilter.svg" alt="Icono para filtrar cuentas">
-                    <p>Ordenar</p>
-                </button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="../assets/img/iconfilter.svg" alt="icono de filtro">
+                        <p>Ordenar</p>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">De menor a mayor</a></li>
+                        <li><a class="dropdown-item" href="#">Mayor a menor</a></li>
+                        <li><a class="dropdown-item" href="#">Alfabéticamente</a></li>
+                    </ul>
+                </div>
             </article>
             <section class="boxIngreso">
                 <section id="cardIngreso">
