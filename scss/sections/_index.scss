@@ -12,7 +12,7 @@
         gap: 15px;
         align-self: stretch;
 
-        &__bienvenida {
+        #usuario__bienvenida {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -42,7 +42,7 @@
         }
     }
 
-    .infoPrincipal {
+    #infoPrincipal {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -53,7 +53,7 @@
             margin: 0;
         }
 
-        &__cuenta {
+        .infoPrincipal__cuenta {
             display: flex;
             align-items: flex-start;
             gap: 25px;
@@ -97,7 +97,7 @@
             font-weight: 300;
         }
 
-        .cajaBusqueda {
+        #cajaBusqueda {
             display: flex;
             width: 100%;
             gap: 20px;
@@ -196,14 +196,14 @@
             }
         }
 
-        .cajaCuentas {
+        #cajaCuentas {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
             align-self: stretch;
 
-            #gestionCuentas {
+            .gestionCuentas {
                 background-color: $color-cajas;
                 border-radius: 8px;
                 display: flex;

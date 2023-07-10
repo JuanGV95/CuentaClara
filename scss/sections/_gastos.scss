@@ -125,14 +125,14 @@
         
         }
 
-        .boxGastos {
+        #boxGastos {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             gap: 20px;
             margin-top: 20px;
 
-            #cardGastos {
+            .cardGastos {
                 display: flex;
                 padding: 20px;
                 width: 256px;
@@ -149,6 +149,9 @@
                     width: 100%;
                     justify-content: space-between;
                     align-items: flex-start;
+                    img{
+                        width: 24px;
+                    }
                 }
 
                 h2 {

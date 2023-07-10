@@ -123,14 +123,14 @@
                 }
             }
         }
-        .boxIngreso {
+        #boxIngreso {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             gap: 20px;
             margin-top: 20px;
 
-            #cardIngreso {
+            .cardIngreso {
                 display: flex;
                 padding: 20px;
                 width: 256px;
@@ -147,6 +147,9 @@
                     width: 100%;
                     justify-content: space-between;
                     align-items: flex-start;
+                    img{
+                        width: 24px;
+                    }
                 }
 
                 h2 {
@@ -162,7 +165,7 @@
                     font-weight: 300;
                 }
 
-                .montoPagoIngreso {
+                #montoPagoIngreso {
                     font-size: 24px;
                 }
             }

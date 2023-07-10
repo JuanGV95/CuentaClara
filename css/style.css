@@ -60,16 +60,16 @@ body {
     align-items: center;
     gap: 15px;
     align-self: stretch; }
-    .main .usuario__bienvenida {
+    .main .usuario #usuario__bienvenida {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       flex: 1 0 0;
       gap: 0.5rem; }
-      .main .usuario__bienvenida h2 {
+      .main .usuario #usuario__bienvenida h2 {
         font-size: 24px;
         margin: 0; }
-      .main .usuario__bienvenida p {
+      .main .usuario #usuario__bienvenida p {
         font-size: 16px;
         color: #D9D9D980;
         margin: 0;
@@ -81,20 +81,20 @@ body {
       border-radius: 100px;
       background-color: #7ECA9C;
       color: #1C1427; }
-  .main .infoPrincipal {
+  .main #infoPrincipal {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     align-self: stretch; }
-    .main .infoPrincipal p {
+    .main #infoPrincipal p {
       margin: 0; }
-    .main .infoPrincipal__cuenta {
+    .main #infoPrincipal .infoPrincipal__cuenta {
       display: flex;
       align-items: flex-start;
       gap: 25px;
       align-self: stretch; }
-      .main .infoPrincipal__cuenta div {
+      .main #infoPrincipal .infoPrincipal__cuenta div {
         display: flex;
         height: 113px;
         padding: 20px;
@@ -105,10 +105,10 @@ body {
         border-radius: 8px;
         flex: 1 0 0;
         background-color: #40394A4D; }
-        .main .infoPrincipal__cuenta div h2 {
+        .main #infoPrincipal .infoPrincipal__cuenta div h2 {
           font-size: 24px;
           margin: 0; }
-        .main .infoPrincipal__cuenta div p {
+        .main #infoPrincipal .infoPrincipal__cuenta div p {
           margin: 0;
           font-size: 14px;
           color: #D9D9D980; }
@@ -120,11 +120,11 @@ body {
     .main .gestion p {
       font-size: 16px;
       font-weight: 300; }
-    .main .gestion .cajaBusqueda {
+    .main .gestion #cajaBusqueda {
       display: flex;
       width: 100%;
       gap: 20px; }
-      .main .gestion .cajaBusqueda .busqueda {
+      .main .gestion #cajaBusqueda .busqueda {
         display: flex;
         padding: 4px 4px 4px 20px;
         align-items: center;
@@ -133,7 +133,7 @@ body {
         flex: 1 0 0;
         align-self: stretch;
         background-color: #40394A; }
-        .main .gestion .cajaBusqueda .busqueda #caja {
+        .main .gestion #cajaBusqueda .busqueda #caja {
           display: flex;
           font-size: 14px;
           height: 48px;
@@ -144,12 +144,12 @@ body {
           background-color: #40394A;
           border: none;
           outline: none; }
-        .main .gestion .cajaBusqueda .busqueda ::placeholder {
+        .main .gestion #cajaBusqueda .busqueda ::placeholder {
           color: #FBFBFB;
           font-weight: 300;
           font-size: 16px;
           letter-spacing: 0.5px; }
-        .main .gestion .cajaBusqueda .busqueda #btnBusqueda {
+        .main .gestion #cajaBusqueda .busqueda #btnBusqueda {
           display: flex;
           width: 48px;
           height: 48px;
@@ -160,19 +160,19 @@ body {
           background-color: #40394A;
           border: none;
           border-radius: 20px; }
-      .main .gestion .cajaBusqueda .dropdown {
+      .main .gestion #cajaBusqueda .dropdown {
         display: flex;
         align-items: center; }
-        .main .gestion .cajaBusqueda .dropdown .dropdown-toggle {
+        .main .gestion #cajaBusqueda .dropdown .dropdown-toggle {
           display: flex;
           align-items: center;
           background-color: transparent;
           border: none;
           padding: 10px 16px 10px 12px;
           border-radius: 20px; }
-          .main .gestion .cajaBusqueda .dropdown .dropdown-toggle p {
+          .main .gestion #cajaBusqueda .dropdown .dropdown-toggle p {
             margin: 0; }
-          .main .gestion .cajaBusqueda .dropdown .dropdown-toggle:hover {
+          .main .gestion #cajaBusqueda .dropdown .dropdown-toggle:hover {
             background-color: #d9d9d925; }
     .main .gestion .listaDatos {
       display: flex;
@@ -194,13 +194,13 @@ body {
         font-weight: 300;
         letter-spacing: 0.5px;
         color: #D9D9D980; }
-    .main .gestion .cajaCuentas {
+    .main .gestion #cajaCuentas {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
       align-self: stretch; }
-      .main .gestion .cajaCuentas #gestionCuentas {
+      .main .gestion #cajaCuentas .gestionCuentas {
         background-color: #40394A4D;
         border-radius: 8px;
         display: flex;
@@ -208,47 +208,47 @@ body {
         align-items: center;
         gap: 20px;
         align-self: stretch; }
-        .main .gestion .cajaCuentas #gestionCuentas img {
+        .main .gestion #cajaCuentas .gestionCuentas img {
           display: flex;
           width: 40px;
           padding: 3.333px;
           justify-content: center;
           align-items: center; }
-        .main .gestion .cajaCuentas #gestionCuentas div {
+        .main .gestion #cajaCuentas .gestionCuentas div {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
           gap: 10px;
           flex: 0.7 0 0; }
-          .main .gestion .cajaCuentas #gestionCuentas div h2,
-          .main .gestion .cajaCuentas #gestionCuentas div p {
+          .main .gestion #cajaCuentas .gestionCuentas div h2,
+          .main .gestion #cajaCuentas .gestionCuentas div p {
             font-size: 14px;
             margin: 0;
             font-weight: 300; }
-          .main .gestion .cajaCuentas #gestionCuentas div p {
+          .main .gestion #cajaCuentas .gestionCuentas div p {
             color: #D9D9D980; }
-        .main .gestion .cajaCuentas #gestionCuentas p {
+        .main .gestion #cajaCuentas .gestionCuentas p {
           display: flex;
           flex-direction: column;
           flex: 1 0 0;
           font-size: 14px;
           font-weight: 300;
           margin: 0; }
-        .main .gestion .cajaCuentas #gestionCuentas #cuadroPendiente {
+        .main .gestion #cajaCuentas .gestionCuentas #cuadroPendiente {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
           flex: 1 0 0; }
-          .main .gestion .cajaCuentas #gestionCuentas #cuadroPendiente p {
+          .main .gestion #cajaCuentas .gestionCuentas #cuadroPendiente p {
             display: flex;
             width: 100px;
             padding: 10px 20px;
             align-items: center;
             color: #E72252;
             background-color: #AF1C401A; }
-        .main .gestion .cajaCuentas #gestionCuentas #btnGestionar {
+        .main .gestion #cajaCuentas .gestionCuentas #btnGestionar {
           display: flex;
           padding: 10px 16px;
           justify-content: center;
@@ -260,7 +260,7 @@ body {
           font-weight: 300;
           font-size: 14px;
           background-color: transparent; }
-          .main .gestion .cajaCuentas #gestionCuentas #btnGestionar:hover {
+          .main .gestion #cajaCuentas .gestionCuentas #btnGestionar:hover {
             background-color: #D9D9D980; }
 
 .mainGastos {
@@ -357,13 +357,13 @@ body {
             margin: 0; }
           .mainGastos .gestionGastos .cajaBusquedaGastos .dropdown .dropdown-toggle:hover {
             background-color: #d9d9d925; }
-    .mainGastos .gestionGastos .boxGastos {
+    .mainGastos .gestionGastos #boxGastos {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 20px;
       margin-top: 20px; }
-      .mainGastos .gestionGastos .boxGastos #cardGastos {
+      .mainGastos .gestionGastos #boxGastos .cardGastos {
         display: flex;
         padding: 20px;
         width: 256px;
@@ -374,21 +374,23 @@ body {
         align-self: stretch;
         border-radius: 8px;
         background-color: #40394A4D; }
-        .mainGastos .gestionGastos .boxGastos #cardGastos .cardIconos {
+        .mainGastos .gestionGastos #boxGastos .cardGastos .cardIconos {
           display: flex;
           width: 100%;
           justify-content: space-between;
           align-items: flex-start; }
-        .mainGastos .gestionGastos .boxGastos #cardGastos h2 {
+          .mainGastos .gestionGastos #boxGastos .cardGastos .cardIconos img {
+            width: 24px; }
+        .mainGastos .gestionGastos #boxGastos .cardGastos h2 {
           font-size: 16px;
           font-weight: 500;
           margin: 0; }
-        .mainGastos .gestionGastos .boxGastos #cardGastos p {
+        .mainGastos .gestionGastos #boxGastos .cardGastos p {
           font-size: 14px;
           color: #D9D9D980;
           margin: 0;
           font-weight: 300; }
-        .mainGastos .gestionGastos .boxGastos #cardGastos .montoPago {
+        .mainGastos .gestionGastos #boxGastos .cardGastos .montoPago {
           font-size: 24px; }
 
 .mainIngreso {
@@ -485,13 +487,13 @@ body {
             margin: 0; }
           .mainIngreso .gestionIngreso .cajaBusquedaIngreso .dropdown .dropdown-toggle:hover {
             background-color: #d9d9d925; }
-    .mainIngreso .gestionIngreso .boxIngreso {
+    .mainIngreso .gestionIngreso #boxIngreso {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 20px;
       margin-top: 20px; }
-      .mainIngreso .gestionIngreso .boxIngreso #cardIngreso {
+      .mainIngreso .gestionIngreso #boxIngreso .cardIngreso {
         display: flex;
         padding: 20px;
         width: 256px;
@@ -502,21 +504,23 @@ body {
         align-self: stretch;
         border-radius: 8px;
         background-color: #40394A4D; }
-        .mainIngreso .gestionIngreso .boxIngreso #cardIngreso .cardIconoIngreso {
+        .mainIngreso .gestionIngreso #boxIngreso .cardIngreso .cardIconoIngreso {
           display: flex;
           width: 100%;
           justify-content: space-between;
           align-items: flex-start; }
-        .mainIngreso .gestionIngreso .boxIngreso #cardIngreso h2 {
+          .mainIngreso .gestionIngreso #boxIngreso .cardIngreso .cardIconoIngreso img {
+            width: 24px; }
+        .mainIngreso .gestionIngreso #boxIngreso .cardIngreso h2 {
           font-size: 16px;
           font-weight: 500;
           margin: 0; }
-        .mainIngreso .gestionIngreso .boxIngreso #cardIngreso p {
+        .mainIngreso .gestionIngreso #boxIngreso .cardIngreso p {
           font-size: 14px;
           color: #D9D9D980;
           margin: 0;
           font-weight: 300; }
-        .mainIngreso .gestionIngreso .boxIngreso #cardIngreso .montoPagoIngreso {
+        .mainIngreso .gestionIngreso #boxIngreso .cardIngreso #montoPagoIngreso {
           font-size: 24px; }
 
 .seccion-agregar-ingreso {

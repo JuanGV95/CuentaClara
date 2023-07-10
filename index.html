@@ -15,14 +15,14 @@
         <h1><a href="./index.html">CuentaClara</a></h1>
         <section class="info">
             <div id="fecha"></div>
-            <div id="info__ingreso">
+            <div clas="info__ingreso " id="balance-en-index">
             </div>
         </section>
         <img src="./assets/img/icon-persona.svg" alt="Persona">
     </header>
     <main class="main">
         <section class="usuario">
-            <div class="usuario__bienvenida">
+            <div id="usuario__bienvenida">
                 <h2>Bienvenido $nombreUsuario,</h2>
                 <p>¡Comienza a organizar tus cuentas!</p>
             </div>
@@ -35,20 +35,20 @@
                     </ul>
             </div>
         </section>
-        <section class="infoPrincipal">
+        <section id="infoPrincipal">
             <p>Balance mes de Julio</p>
             <article class="infoPrincipal__cuenta">
                 <div>
                     <p>Saldo actual</p>
-                    <h2>$ 300 USD</h2>
+                    <h2 id="saldo-actual"></h2>
                 </div>
                 <div>
-                    <p>Gastos</p>
-                    <h2>$ 500 USD</h2>
+                    <p>Pagos realizados</p>
+                    <h2>0</h2>
                 </div>
                 <div>
                     <p>Ingresos</p>
-                    <h2>$ 800 USD</h2>
+                    <h2 id="valor-ingresos"></h2>
                 </div>
             </article>
             <article class="infoPrincipal__cuenta">
@@ -58,17 +58,17 @@
                 </div>
                 <div>
                     <p>Valor pagos pendientes</p>
-                    <h2>$ 1.000 USD</h2>
+                    <h2 id="valor-gastos">$ 1.000 USD</h2>
                 </div>
                 <div>
                     <p>Pronostico fin de mes</p>
-                    <h2>$ -10 USD</h2>
+                    <h2 id="pronostico-fin"></h2>
                 </div>
             </article>
         </section>
         <section class="gestion">
             <p>Gestionar pagos</p>
-            <article class="cajaBusqueda">
+            <article id="cajaBusqueda">
                 <article class="busqueda">
                     <input type="text" name="buscar" id="caja" placeholder="Buscar">
                     <button id="btnBusqueda">
@@ -98,19 +98,8 @@
                     <li>Acciones</li>
                 </ul>
             </ul>
-            <section class="cajaCuentas">
-                <article id="gestionCuentas">
-                    <img src="./assets/img/pigIcon.svg" alt="un cerdito de ahorro">
-                    <div>
-                        <h2>Viaje en pareja</h2>
-                        <p>Meta de ahorro</p>
-                    </div>
-                    <p>$ 102 USD</p>
-                    <div id="cuadroPendiente">
-                        <p>Pendiente</p>
-                    </div>
-                    <button id="btnGestionar">Gestionar</button>
-                </article>
+            <section id="cajaCuentas">
+
             </section>
         </section>
     </main>
@@ -134,6 +123,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/func-calculos.js"></script>
 </body>
 
 </html>
