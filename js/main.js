@@ -63,8 +63,8 @@ let listaUsuarios = [];
 
 
 //fecha
-const hoy = new Date();
-fechaActual.innerHTML = hoy.toDateString();
+/* const hoy = new Date();
+fechaActual.innerHTML = hoy.toDateString(); */
 
 
 
@@ -98,65 +98,32 @@ if (localStorage.getItem("listaIngresos")) {
     listaIngresos.push(nuevoIngreso1, nuevoIngreso2, nuevoIngreso3, nuevoIngreso4);
     localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
 }
-/* seccion para todo DOM */
-/* el if Sirve para que solo esta seccion de js funcione en index esta chevere es como un scope */
-if (window.location.href.includes("index.html")) {
-    function mostrarGestionDom(array) {
-        gestionDeGastos = ``;
-        for (let nuevaCuenta of array) {
-            let gestionPendiente = document.createElement("article")
-            gestionPendiente.className = "gestionCuentas"
-            gestionPendiente.innerHTML = `<img src="assets/img/${nuevaCuenta.imagen}" alt="un cerdito de ahorro">
-        <div>
-            <h2>${nuevaCuenta.nombreCuenta}</h2>
-            <p>${nuevaCuenta.cuenta}</p>
-        </div>
-        <p>$ ${valorCuotas(nuevaCuenta)} USD</p>
-        <div id="cuadroPendiente">
-            <p>Pendiente</p>
-        </div>
-        <button id="btnGestionar">Gestionar</button>`
-            gestionDeGastos.appendChild(gestionPendiente)
-        }
 
-    }
-    mostrarGestionDom(listaCuentas);
+/* calcular total de Ingresos actual */
+let sumarIngresos = 0;
+for(let losIngresos of listaIngresos){
+    sumarIngresos += losIngresos.valorIngreso;
 }
-if (window.location.href.includes("gastos.html")) {
-    function gastosCreados(array) {
-        for (let mostrarGastosCreados of array) {
-            let crearGastoCard = document.createElement("section")
-            crearGastoCard.className = "cardGastos"
-            crearGastoCard.innerHTML = ` <div class="cardIconos">
-        <img src="../assets/img/${mostrarGastosCreados.imagen} " alt="Icono de alcancia">
-        <img src="../assets/img/trashIcon.svg" alt="icono para borrar" id="borrarCard">
-    </div>
-        <h2> ${mostrarGastosCreados.nombreCuenta} </h2>
-        <p> ${mostrarGastosCreados.cuenta}</p>
-        <p>${mostrarGastosCreados.cuotas} cuotas</p>
-        <h2 class="montoPago">$ ${mostrarGastosCreados.valor} USD</h2>`
-            boxGastos.appendChild(crearGastoCard);
-        }
-    }
-    gastosCreados(listaCuentas);
+/* sumar ingresos al balance */
+let balanceIngresado = sumarIngresos;
+
+
+
+
+/* Calcular total de en Gastos */
+let sumarGastos = 0;
+for (let losGastos of listaCuentas){
+    let totalGastosCuota = valorCuotas(losGastos)
+    sumarGastos += Number(totalGastosCuota);
 }
-if (window.location.href.includes("ingresos.html")) {
-    function ingresosCreados(array) {
-        for (let mostrarIngresos of array) {
-            let crearIngreso = document.createElement("section")
-            crearIngreso.className = "cardIngreso"
-            crearIngreso.innerHTML = ` 
-            <div class="cardIconoIngreso">
-            <img src="../assets/img/${mostrarIngresos.imagendeIngreso}"
-            alt="Icono de alcancia">
-            <img src="../assets/img/trashIcon.svg" alt="icono para borrar"
-            id="borrarCard"></div>
-    <h2>${mostrarIngresos.cuentaIngreso}</h2>
-    <p>${mostrarIngresos.nombreIngreso} </p>
-    <h2 class="montoPagoIngreso">$ ${mostrarIngresos.valorIngreso} USD</h2>`
-            boxIngreso.appendChild(crearIngreso);
-        }
-    }
-    ingresosCreados(listaIngresos);
+
+/* calcular diferencia entre balance actual y gastos del mes */
+let pronosticoFinDe = 0;
+for (let pronostico of listaCuentas){
+    let totalCuota = valorCuotas(pronostico);
+    pronosticoFinDe += Number(totalCuota);
 }
-/* Seccion filtro/buscar de index o pagina de gestion de pagos */
+let saldoFinal = balanceIngresado - pronosticoFinDe;
+
+
+/* funciones para crear cuentas */
