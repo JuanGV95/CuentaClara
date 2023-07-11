@@ -54,7 +54,11 @@ let gastosTotal = document.getElementById("valor-gastos");
 let totalAlFinal = document.getElementById("pronostico-fin");
 let boxGastos = document.getElementById("boxGastos");
 let boxIngreso = document.getElementById("boxIngreso");
-let btnAgregarMeta = document.getElementById("completar-proceso-meta")
+let btnAgregarMeta = document.getElementById("completar-proceso-meta");
+let btnAgregarMetaCredito = document.getElementById("completar-proceso");
+let btnAgregarOtro = document.getElementById("completar-proceso-otro");
+let resultadoBusqueda = document.getElementById("resultadoBusqueda");
+let cajaGastos = document.getElementById("cajaGastos");
 /*Arrays*/
 let listaIngresos = [];
 let listaCuentas = [];
@@ -106,9 +110,6 @@ for(let losIngresos of listaIngresos){
 }
 /* sumar ingresos al balance */
 let balanceIngresado = sumarIngresos;
-
-
-
 
 /* Calcular total de en Gastos */
 let sumarGastos = 0;

@@ -1,4 +1,4 @@
-/* si ves esto es muy posible que la funcion no este funcionando bien por ese if preguntame*/
+
 saldoActual.innerHTML = `$ ${balanceIngresado} USD`;
 dineroQueIngresa.innerHTML = `$${balanceIngresado} USD`; 
 gastosTotal.innerHTML = `$ ${sumarGastos} USD`;

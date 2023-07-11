@@ -11,13 +11,13 @@ function ahorros(listaCuentas) {
     listaCuentas.push(nuevaCuenta);
   
     localStorage.setItem("listaCuentas", JSON.stringify(listaCuentas))
-    /* gastosCreados(...listaCuentas); */
+    window.location.href = "gastos.html";
 
-
-    /* reseteamos los campos macheteramente */
-   
 }
-/* Eventos */
+
+
+
+// Eventos 
 
 
 btnAgregarMeta.addEventListener("click", () => {
@@ -25,3 +25,4 @@ btnAgregarMeta.addEventListener("click", () => {
     ahorros(listaCuentas);
     
 });
+

@@ -54,12 +54,12 @@
         }
 
         #seccion-btn-tres-true {
-            display: flex;
+            display: none;
             width: 100%;
             flex-direction: column;
             align-items: flex-start;
             flex-shrink: 0;
-
+            
             .btn-tres-datos {
                 display: flex;
                 flex-direction: column;
