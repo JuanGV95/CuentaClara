@@ -7,13 +7,34 @@ function ingresosCreados(array) {
         <div class="cardIconoIngreso">
         <img src="../assets/img/${mostrarIngresos.imagendeIngreso}"
         alt="Icono de alcancia">
-        <img src="../assets/img/trashIcon.svg" alt="icono para borrar"
-        id="borrarCard"></div>
+        <a href="" id="borrarCardIngreso${mostrarIngresos.id}"><img src="../assets/img/trashIcon.svg" alt="icono para borrar"
+        ></a></div>
 <h2>${mostrarIngresos.cuentaIngreso}</h2>
 <p>${mostrarIngresos.nombreIngreso} </p>
 <h2 class="montoPagoIngreso">$ ${mostrarIngresos.valorIngreso} USD</h2>`
         boxIngreso.appendChild(crearIngreso);
     }
+    array.forEach((mostrarIngresos) => {
+        //manipular el DOM sin guardar en variable
+        document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`).addEventListener("click", () => {
+           console.log(`Eliminar producto`)
+           //borrar del DOM
+           let cardProducto = document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`)
+           cardProducto.remove()
+           //borrar del array
+           //encontramos objeto a eliminar
+           let productoEliminar = array.find((ingresos) => ingresos.id == mostrarIngresos.id)
+           console.log(productoEliminar)
+           //buscar indice
+           let posicion = array.indexOf(productoEliminar)
+           console.log(posicion)
+           array.splice(posicion,1)
+           console.log(array)
+           //setear storage
+           localStorage.setItem("listaIngresos", JSON.stringify(array))
+        })
+    
+    })
 }
 ingresosCreados(listaIngresos);
 
