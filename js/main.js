@@ -58,7 +58,11 @@ let btnAgregarMeta = document.getElementById("completar-proceso-meta");
 let btnAgregarMetaCredito = document.getElementById("completar-proceso");
 let btnAgregarOtro = document.getElementById("completar-proceso-otro");
 let resultadoBusqueda = document.getElementById("resultadoBusqueda");
+let resultadoBusquedaIndex = document.getElementById("resultadoBusquedaIndex");
+let resultadoBusquedaIngreso = document.getElementById("resultadoBusquedaIngreso");
 let cajaGastos = document.getElementById("cajaGastos");
+let cajaIndex = document.getElementById("caja");
+let cajaIngreso = document.getElementById("cajaIngreso")
 /*Arrays*/
 let listaIngresos = [];
 let listaCuentas = [];

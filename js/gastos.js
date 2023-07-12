@@ -7,7 +7,8 @@ function gastosCreados(array) {
     for (let mostrarGastosCreados of array) {
         let crearGastoCard = document.createElement("section")
         crearGastoCard.className = "cardGastos"
-        crearGastoCard.innerHTML = ` <div class="cardIconos">
+        crearGastoCard.innerHTML = ` 
+        <div class="cardIconos">
     <img src="../assets/img/${mostrarGastosCreados.imagen} " alt="Icono de alcancia">
     <img src="../assets/img/trashIcon.svg" alt="icono para borrar" id="borrarCard${listaCuentas.id} ">
 </div>
@@ -22,6 +23,8 @@ function gastosCreados(array) {
 gastosCreados(listaCuentas);
 
 
+
+/* Buscador */
 function buscarInfo(buscado, array){
 
     
