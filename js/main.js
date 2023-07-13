@@ -62,7 +62,8 @@ let resultadoBusquedaIndex = document.getElementById("resultadoBusquedaIndex");
 let resultadoBusquedaIngreso = document.getElementById("resultadoBusquedaIngreso");
 let cajaGastos = document.getElementById("cajaGastos");
 let cajaIndex = document.getElementById("caja");
-let cajaIngreso = document.getElementById("cajaIngreso")
+let cajaIngreso = document.getElementById("cajaIngreso");
+let actualizarSueldoFijo = document.getElementById("actualizar-sueldo-fijo");
 /*Arrays*/
 let listaIngresos = [];
 let listaCuentas = [];
