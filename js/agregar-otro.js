@@ -1,8 +1,11 @@
 let checkCuotas = document.getElementById("flexSwitchCheckDefault");
 let divCheckCuotas = document.getElementById("seccion-btn-tres-true");
+let checkBoxDefUno = document.getElementById("flexSwitchCheckDisabled")
+let checkBoxDefDos = document.getElementById("flexSwitchCheckChecked")
 checkCuotas.addEventListener ("click", function ()  {
     if(checkCuotas.checked){
         divCheckCuotas.style.display = "block";
+          
     } else {
         divCheckCuotas.style.display = "none";
     }
@@ -31,3 +34,5 @@ btnAgregarOtro.addEventListener("click", () => {
     otrasCuentas(listaCuentas);
     
 });
+
+

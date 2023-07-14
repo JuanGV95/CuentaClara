@@ -64,6 +64,7 @@ let cajaGastos = document.getElementById("cajaGastos");
 let cajaIndex = document.getElementById("caja");
 let cajaIngreso = document.getElementById("cajaIngreso");
 let actualizarSueldoFijo = document.getElementById("actualizar-sueldo-fijo");
+let saldoEnVivo = document.getElementById("saldo-en-vivo");
 /*Arrays*/
 let listaIngresos = [];
 let listaCuentas = [];
@@ -71,9 +72,7 @@ let listaUsuarios = [];
 /*Arrays*/
 
 
-//fecha
-/* const hoy = new Date();
-fechaActual.innerHTML = hoy.toDateString(); */
+
 
 
 

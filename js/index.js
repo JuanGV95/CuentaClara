@@ -1,8 +1,11 @@
-
+saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
 saldoActual.innerHTML = `$ ${balanceIngresado} USD`;
 dineroQueIngresa.innerHTML = `$${balanceIngresado} USD`; 
 gastosTotal.innerHTML = `$ ${sumarGastos} USD`;
 totalAlFinal.innerHTML = `$ ${saldoFinal} USD`;
+//fecha
+const hoy = new Date();
+fechaActual.innerHTML = hoy.toDateString(); 
 
 function mostrarGestionDom(array) {
     gestionDeGastos.innerHTML = ``

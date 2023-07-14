@@ -1,3 +1,8 @@
+//fecha
+const hoy = new Date();
+fechaActual.innerHTML = hoy.toDateString(); 
+saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
+
 function ingresosCreados(array) {
     boxIngreso.innerHTML = ``
     for (let mostrarIngresos of array) {
