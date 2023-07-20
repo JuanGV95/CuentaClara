@@ -1,8 +1,6 @@
 //en esta seccion se crea y selecciona cada cuenta segun la necesidad 
 //esta super machetero pero me esforce por hacerlo funcionar con mis conocimientos
 
-
-
 let checkCuotas = document.getElementById("flexSwitchCheckDefault");
 let divCheckCuotas = document.getElementById("seccion-btn-tres-true");
 let divMensualOtro = document.getElementById("checkbox-mensual-otro");

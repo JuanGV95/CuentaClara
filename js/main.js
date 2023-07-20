@@ -84,9 +84,9 @@ const nuevaCuenta4 = new Cuentas(4, "Ahorro", "Moto", 36, 3000, 12, "pigIcon.svg
 /* ejemplos de objetos ya creados para usar con filtros/find y sort */
 /* ejemplos para los ingresos en la version final esto tambien se ELIMINA*/
 const nuevoIngreso1 = new Ingresos(1, "Sueldo Fijo", "mensual", 300, "officeBagIcon.svg");
-const nuevoIngreso2 = new Ingresos(2, "Trabajo freelance", "mensual", 100, "dotsIcon.svg");
-const nuevoIngreso3 = new Ingresos(3, "Venta de servicios", "mensual", 200, "dotsIcon.svg");
-const nuevoIngreso4 = new Ingresos(4, "Venta portatil", "mensual", 400, "dotsIcon.svg");
+const nuevoIngreso2 = new Ingresos(2, "Trabajo freelance", "mensual", 100, "dollaricon.svg");
+const nuevoIngreso3 = new Ingresos(3, "Venta de servicios", "mensual", 200, "dollaricon.svg");
+const nuevoIngreso4 = new Ingresos(4, "Venta portatil", "mensual", 400, "dollaricon.svg");
 /* ejemplos para los ingresos */
 
 /* Guardamos los array de prueba en el local storage */
