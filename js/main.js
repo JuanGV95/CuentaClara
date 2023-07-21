@@ -68,7 +68,8 @@ let saldoEnVivo = document.getElementById("saldo-en-vivo");
 /*Arrays*/
 let listaIngresos = [];
 let listaCuentas = [];
-let listaUsuarios = [];
+
+/* let listaUsuarios = [];  EN CONTRUCCION*/
 /*Arrays*/
 
 
