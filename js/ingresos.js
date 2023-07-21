@@ -43,10 +43,6 @@ function ingresosCreados(array) {
 }
 ingresosCreados(listaIngresos);
 
-
-
-
-
 /* Buscador */
 function buscarInfoIngreso(buscado, array){
 
@@ -65,5 +61,53 @@ function buscarInfoIngreso(buscado, array){
   cajaIngreso.addEventListener("input", () => {
     buscarInfoIngreso(cajaIngreso.value, listaIngresos)
  })
-// la prueba
+
+
+ //Ordenar 
+  
+ let btnOrdenarIngresos = document.getElementById("btn-ordenar-ingresos");
+ function ordenarIngresoMenorMayor(array) {
+    const menorMayor = [].concat(array);
+    menorMayor.sort((elem1, elem2) => elem1.valorIngreso - elem2.valorIngreso)
+    ingresosCreados(menorMayor);
+};
+
+function ordenarIngresoMayorMenor(array) {
+    const mayorMenor = [].concat(array);
+    mayorMenor.sort((elem1, elem2) => elem2.valorIngreso - elem1.valorIngreso)
+    ingresosCreados(mayorMenor);
+};
+
+function ordenIngresoAlfabetico(array) {
+    const arrayAlfabetico = [].concat(array)
+    arrayAlfabetico.sort((a, b) => {
+        if (a.nombreIngreso > b.nombreIngreso) {
+            return 1
+        }
+        if (a.nombreIngreso < b.nombreIngreso) {
+            return -1
+        }
+        return 0
+    });
+    ingresosCreados(arrayAlfabetico)
+};
+
+btnOrdenarIngresos.addEventListener("change", () =>{
+    console.log(btnOrdenarIngresos.value)
+    switch (btnOrdenarIngresos.value) {
+        case "1":
+            ordenarIngresoMenorMayor(listaIngresos);
+            break
+        case "2":
+            ordenarIngresoMayorMenor(listaIngresos);
+            break
+        case "3":
+            ordenIngresoAlfabetico(listaIngresos);
+            break
+        
+        default:
+            ingresosCreados(listaIngresos);
+            break
+    }
+})
  

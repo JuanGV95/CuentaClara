@@ -64,7 +64,52 @@ function buscarInfo(buscado, array){
     buscarInfo(cajaGastos.value, listaCuentas)
  })
 
- 
+ //Ordenar Gastos
+ let btnOrdenarGastos = document.getElementById("btn-ordenar-gastos");
+
+ function ordenarGastosMenorMayor(array){
+    const menorMayor = [].concat(array);
+    menorMayor.sort((elem1, elem2) => elem1.valor - elem2.valor)
+    gastosCreados(menorMayor);
+ };
+
+ function ordenarGastosMayorMenor(array){
+    const mayorMenor = [].concat(array);
+    mayorMenor.sort((elem1, elem2) => elem2.valor - elem1.valor)
+    gastosCreados(mayorMenor);
+ };
+
+ function ordenGastoAlfabetico(array){
+    const gastoAlfabetico = [].concat(array)
+    gastoAlfabetico.sort((a, b) => {
+        if (a.nombreCuenta > b.nombreCuenta){
+            return 1
+        }
+        if(a.nombreCuenta < b.nombreCuenta){
+            return -1
+        }
+        return 0
+    });
+    gastosCreados(gastoAlfabetico);
+ };
+
+ btnOrdenarGastos.addEventListener("change", () => {
+    switch (btnOrdenarGastos.value) {
+        case "1":
+            ordenarGastosMenorMayor(listaCuentas);
+            break;
+        case "2":
+            ordenarGastosMayorMenor(listaCuentas); 
+            break;
+        case "3":
+            ordenGastoAlfabetico(listaCuentas);
+            break;    
+        default:
+            break;
+    }
+ })
+
+
 
 
 
