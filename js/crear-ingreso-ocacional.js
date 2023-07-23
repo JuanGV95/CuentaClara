@@ -14,13 +14,15 @@ function ingresoOcacional (listaIngresos){
         nuevoIngreso = new Ingresos(listaIngresos.length + 1, tipoDeIngreso, nombreIngresoOc.value, Number(valorDeIngreso.value), "dollaricon.svg");
     }
 
+    
     listaIngresos.push(nuevoIngreso);
-
     localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
-    window.location.href = "ingresos.html";
+
+    window.location.href = "ingresos.html"; 
 }
 
 completarProcesoOcacional.addEventListener("click", () => {
+ listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
     console.log(listaIngresos);
     ingresoOcacional(listaIngresos);
 })

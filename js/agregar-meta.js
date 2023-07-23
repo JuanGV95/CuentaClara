@@ -9,7 +9,6 @@ function ahorros(listaCuentas) {
     
     //pusheamos al array:
     listaCuentas.push(nuevaCuenta);
-  
     localStorage.setItem("listaCuentas", JSON.stringify(listaCuentas))
     window.location.href = "gastos.html";
 
@@ -21,6 +20,7 @@ function ahorros(listaCuentas) {
 
 
 btnAgregarMeta.addEventListener("click", () => {
+    listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
     console.log(listaCuentas)
     ahorros(listaCuentas);
     

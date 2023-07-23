@@ -65,71 +65,33 @@ let cajaIndex = document.getElementById("caja");
 let cajaIngreso = document.getElementById("cajaIngreso");
 let actualizarSueldoFijo = document.getElementById("actualizar-sueldo-fijo");
 let saldoEnVivo = document.getElementById("saldo-en-vivo");
+
 /*Arrays*/
+/* let listaUsuarios = [];  EN CONTRUCCION*/
 let listaIngresos = [];
 let listaCuentas = [];
-
-/* let listaUsuarios = [];  EN CONTRUCCION*/
-/*Arrays*/
-
-
-
-
-
-
-/* ejemplos de objetos ya creados para usar con filtros/find y sort, en la version final esto se ELIMINA!! */
-const nuevaCuenta1 = new Cuentas(1, "Ahorro", "Viaje", 20, 600, 12, "pigIcon.svg");
-const nuevaCuenta2 = new Cuentas(2, "Credito", "Credito Estudiantil", 36, 5000, 12, "creditIcon.svg");
-const nuevaCuenta3 = new Cuentas(3, "Otro", "Prestamo", 14, 1200, 12, "dotsIcon.svg");
-const nuevaCuenta4 = new Cuentas(4, "Ahorro", "Moto", 36, 3000, 12, "pigIcon.svg");
-/* ejemplos de objetos ya creados para usar con filtros/find y sort */
-/* ejemplos para los ingresos en la version final esto tambien se ELIMINA*/
-const nuevoIngreso1 = new Ingresos(1, "Sueldo Fijo", "mensual", 300, "officeBagIcon.svg");
-const nuevoIngreso2 = new Ingresos(2, "Trabajo freelance", "mensual", 100, "dollaricon.svg");
-const nuevoIngreso3 = new Ingresos(3, "Venta de servicios", "mensual", 200, "dollaricon.svg");
-const nuevoIngreso4 = new Ingresos(4, "Venta portatil", "mensual", 400, "dollaricon.svg");
-/* ejemplos para los ingresos */
-
-/* Guardamos los array de prueba en el local storage */
-if (localStorage.getItem("listaCuentas")) {
-    listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
-} else {
-    console.log("seteamos el Array listaCuentas");
-    listaCuentas.push(nuevaCuenta1, nuevaCuenta2, nuevaCuenta3, nuevaCuenta4);
-    localStorage.setItem("listaCuentas", JSON.stringify(listaCuentas));
-}
-/* - - - - - - - - - - - -  */
-
-if (localStorage.getItem("listaIngresos")) {
-    listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
-} else {
-    console.log("seteamos Lista de Ingresos");
-    listaIngresos.push(nuevoIngreso1, nuevoIngreso2, nuevoIngreso3, nuevoIngreso4);
-    localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
-}
-
-/* calcular total de Ingresos actual */
 let sumarIngresos = 0;
-for(let losIngresos of listaIngresos){
-    sumarIngresos += losIngresos.valorIngreso;
-}
-/* sumar ingresos al balance */
 let balanceIngresado = sumarIngresos;
-
-/* Calcular total de en Gastos */
 let sumarGastos = 0;
-for (let losGastos of listaCuentas){
-    let totalGastosCuota = valorCuotas(losGastos)
-    sumarGastos += Number(totalGastosCuota);
-}
-
-/* calcular diferencia entre balance actual y gastos del mes */
 let pronosticoFinDe = 0;
-for (let pronostico of listaCuentas){
-    let totalCuota = valorCuotas(pronostico);
-    pronosticoFinDe += Number(totalCuota);
-}
 let saldoFinal = balanceIngresado - pronosticoFinDe;
+// setTimeout(() =>{
 
+// /* calcular total de Ingresos actual */
+// for(let losIngresos of listaIngresos){
+//     sumarIngresos += losIngresos.valorIngreso;
+// }
+// /* sumar ingresos al balance */
 
-/* funciones para crear cuentas */
+// /* Calcular total de en Gastos */
+// for (let losGastos of listaCuentas){
+//     let totalGastosCuota = valorCuotas(losGastos)
+//     sumarGastos += Number(totalGastosCuota);
+// }
+
+// /* calcular diferencia entre balance actual y gastos del mes */
+// for (let pronostico of listaCuentas){
+//     let totalCuota = valorCuotas(pronostico);
+//     pronosticoFinDe += Number(totalCuota);
+// }
+// },1000)

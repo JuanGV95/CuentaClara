@@ -56,6 +56,7 @@ function otrasCuentas(listaCuentas) {
     let cuotasPagoOtro = document.getElementById("cuota-de-otro-tres");
     let valorCuentaOtro = document.getElementById("cuotas-de-otro");
     let tasaInteresOtro = document.getElementById("tasa-de-otro");
+
     nuevaCuenta = new Cuentas(
       listaCuentas.length + 1,
       cuentaTipoOtro,
@@ -105,6 +106,7 @@ function otrasCuentas(listaCuentas) {
 
 // y por ultimo el boton para agregar nuestra nueva cuenta maravilloso :D
 btnAgregarOtro.addEventListener("click", () => {
+  listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"))
   console.log(listaCuentas);
   otrasCuentas(listaCuentas);
 });

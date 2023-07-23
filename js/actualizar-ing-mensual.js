@@ -2,6 +2,7 @@
 function baseMensual(listaIngresos) {
     let valorIng = document.getElementById("nombre-ingreso-oc");
     sumarIngresos = valorIng + sumarIngresos;
+    
     const nuevoIngreso = new Ingresos(listaIngresos.length > 0 ? listaIngresos[0].id : 1, "Sueldo Fijo", "mensual", Number(valorIng.value), "officeBagIcon.svg");
 
     if (listaIngresos.length > 0) {
@@ -15,5 +16,6 @@ function baseMensual(listaIngresos) {
 }
 
 actualizarSueldoFijo.addEventListener("click", () => {
+    listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
     baseMensual(listaIngresos);
 });

@@ -1,3 +1,24 @@
+const cargarCuentas = async () =>{
+    const r = await fetch(`../js/json/cuentas.json`);
+    const d = await r.json()
+
+    for(let cuenta of d){
+        let nuevaCuenta = new Cuentas(cuenta.id, cuenta.cuenta, cuenta.nombreCuenta, cuenta.cuotas, cuenta.valor, cuenta.interes, cuenta.imagen);
+        listaCuentas.push(nuevaCuenta);
+        
+    };
+    localStorage.setItem("listaCuentas", JSON.stringify(listaCuentas));
+    gastosCreados(d)
+};
+
+if (localStorage.getItem("listaCuentas")) {
+    listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
+} else {
+    console.log("seteamos el Array listaCuentas");
+    cargarCuentas();
+    
+}
+
 //fecha
 const hoy = new Date();
 fechaActual.innerHTML = hoy.toDateString(); 

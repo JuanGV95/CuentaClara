@@ -1,6 +1,31 @@
+const cargarIngresos = async () => {
+    const a = await fetch("../js/json/ingresos.json");
+    const b = await a.json();
+
+    for (let ingreso of b) {
+        let nuevoIngreso = new Ingresos(ingreso.id, ingreso.cuentaIngreso, ingreso.nombreIngreso, ingreso.valorIngreso, ingreso.imagendeIngreso);
+        listaIngresos.push(nuevoIngreso);
+    }
+    localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
+    ingresosCreados(listaIngresos)
+    
+};
+
+
+/* - - - - - - - - - - - -  */
+if (localStorage.getItem("listaIngresos")) {
+    listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
+} else {
+    console.log("seteamos Lista de Ingresos");
+    cargarIngresos();
+}
+
+ /* calcular total de Ingresos actual */
+ 
+
 //fecha
 const hoy = new Date();
-fechaActual.innerHTML = hoy.toDateString(); 
+fechaActual.innerHTML = hoy.toDateString();
 saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
 
 function ingresosCreados(array) {
@@ -22,51 +47,52 @@ function ingresosCreados(array) {
     array.forEach((mostrarIngresos) => {
         //manipular el DOM sin guardar en variable
         document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`).addEventListener("click", () => {
-           console.log(`Eliminar producto`)
-           //borrar del DOM
-           let cardProducto = document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`)
-           cardProducto.remove()
-           //borrar del array
-           //encontramos objeto a eliminar
-           let productoEliminar = array.find((ingresos) => ingresos.id == mostrarIngresos.id)
-           console.log(productoEliminar)
-           //buscar indice
-           let posicion = array.indexOf(productoEliminar)
-           console.log(posicion)
-           array.splice(posicion,1)
-           console.log(array)
-           //setear storage
-           localStorage.setItem("listaIngresos", JSON.stringify(array))
+            console.log(`Eliminar producto`)
+            //borrar del DOM
+            let cardProducto = document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`)
+            cardProducto.remove()
+            //borrar del array
+            //encontramos objeto a eliminar
+            let productoEliminar = array.find((ingresos) => ingresos.id == mostrarIngresos.id)
+            console.log(productoEliminar)
+            //buscar indice
+            let posicion = array.indexOf(productoEliminar)
+            console.log(posicion)
+            array.splice(posicion, 1)
+            console.log(array)
+            //setear storage
+            localStorage.setItem("listaIngresos", JSON.stringify(array))
         })
-    
+        
     })
+
 }
 ingresosCreados(listaIngresos);
 
 /* Buscador */
-function buscarInfoIngreso(buscado, array){
+function buscarInfoIngreso(buscado, array) {
 
-    
+
     let busqueda = array.filter(
-       (dato) => 
-       dato.cuentaIngreso.toLowerCase().includes(buscado.toLowerCase())  || dato.nombreIngreso.toLowerCase().includes(buscado.toLowerCase())
+        (dato) =>
+            dato.cuentaIngreso.toLowerCase().includes(buscado.toLowerCase()) || dato.nombreIngreso.toLowerCase().includes(buscado.toLowerCase())
     )
-  
+
     busqueda.length == 0 ?
-    (resultadoBusquedaIngreso.innerHTML = `<h3>No hay coincidencias con la búsqueda ${buscado}</h3>`,
-    ingresosCreados(busqueda)) :
-    (resultadoBusquedaIngreso.innerHTML = "", ingresosCreados(busqueda))
-  }
+        (resultadoBusquedaIngreso.innerHTML = `<h3>No hay coincidencias con la búsqueda ${buscado}</h3>`,
+            ingresosCreados(busqueda)) :
+        (resultadoBusquedaIngreso.innerHTML = "", ingresosCreados(busqueda))
+}
 
-  cajaIngreso.addEventListener("input", () => {
+cajaIngreso.addEventListener("input", () => {
     buscarInfoIngreso(cajaIngreso.value, listaIngresos)
- })
+})
 
 
- //Ordenar 
-  
- let btnOrdenarIngresos = document.getElementById("btn-ordenar-ingresos");
- function ordenarIngresoMenorMayor(array) {
+//Ordenar 
+
+let btnOrdenarIngresos = document.getElementById("btn-ordenar-ingresos");
+function ordenarIngresoMenorMayor(array) {
     const menorMayor = [].concat(array);
     menorMayor.sort((elem1, elem2) => elem1.valorIngreso - elem2.valorIngreso)
     ingresosCreados(menorMayor);
@@ -92,7 +118,7 @@ function ordenIngresoAlfabetico(array) {
     ingresosCreados(arrayAlfabetico)
 };
 
-btnOrdenarIngresos.addEventListener("change", () =>{
+btnOrdenarIngresos.addEventListener("change", () => {
     console.log(btnOrdenarIngresos.value)
     switch (btnOrdenarIngresos.value) {
         case "1":
@@ -104,10 +130,9 @@ btnOrdenarIngresos.addEventListener("change", () =>{
         case "3":
             ordenIngresoAlfabetico(listaIngresos);
             break
-        
+
         default:
             ingresosCreados(listaIngresos);
             break
     }
 })
- 

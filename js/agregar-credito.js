@@ -3,12 +3,12 @@ function credito(listaCuentas) {
     let nombrarCuentaCredito = document.getElementById("nombre-de-credito");
     let cuotasPagoCredito = document.getElementById("cuotas-de-credito");
     let valorCuentaCredito = document.getElementById("valor-de-credito");
-    let tasaInteresCredito = document.getElementById("tasa-interes-credito")
+    let tasaInteresCredito = document.getElementById("tasa-interes-credito");
+   
     const nuevaCuenta = new Cuentas(listaCuentas.length + 1, cuentaTipo, nombrarCuentaCredito.value, cuotasPagoCredito.value, valorCuentaCredito.value, tasaInteresCredito.value, "creditIcon.svg");
     
     //pusheamos al array:
     listaCuentas.push(nuevaCuenta);
-  
     localStorage.setItem("listaCuentas", JSON.stringify(listaCuentas))
     window.location.href = "gastos.html";
 
@@ -18,6 +18,7 @@ function credito(listaCuentas) {
 
 // Eventos 
 btnAgregarMetaCredito.addEventListener("click", () => {
+    listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
     console.log(listaCuentas)
     credito(listaCuentas);
     
