@@ -12,7 +12,26 @@ function baseMensual(listaIngresos) {
     }
     
     localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
-    window.location.href = "ingresos.html";
+    
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: '¡Tu sueldo se ha actualizado correctamente!'
+    })
+    setTimeout(()=>{
+      window.location.href = "ingresos.html";
+    },2000)
 }
 
 actualizarSueldoFijo.addEventListener("click", () => {

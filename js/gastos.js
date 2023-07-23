@@ -41,25 +41,35 @@ function gastosCreados(array) {
         boxGastos.appendChild(crearGastoCard);
     }
     array.forEach((mostrarGastosCreados) => {
-        //manipular el DOM sin guardar en variable
-        document.getElementById(`borrarCard${mostrarGastosCreados.id}`).addEventListener("click", () => {
-           console.log(`Eliminar producto`)
+        document.getElementById(`borrarCard${mostrarGastosCreados.id}`).addEventListener("click", function(event) {
+            event.preventDefault()
+            Swal.fire({
+                title: 'Eliminar gasto',
+                text: "¿Estás seguro de esta acción? se eliminará de forma permanente.",
+                showCancelButton: true,
+                confirmButtonColor: '#E72252',
+                cancelButtonColor: '#40394A',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Confirmar'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  console.log(`Eliminar producto`)
            //borrar del DOM
            let cardProducto = document.getElementById(`borrarCard${mostrarGastosCreados.id}`)
            cardProducto.remove()
            //borrar del array
            //encontramos objeto a eliminar
            let productoEliminar = array.find((cuentas) => cuentas.id == mostrarGastosCreados.id)
-           console.log(productoEliminar)
            //buscar indice
            let posicion = array.indexOf(productoEliminar)
-           console.log(posicion)
            array.splice(posicion,1)
-           console.log(array)
            //setear storage
            localStorage.setItem("listaCuentas", JSON.stringify(array))
-        })
-    
+           window.location.href = "gastos.html";
+                }
+              })
+           
+        })   
     })
 }
 

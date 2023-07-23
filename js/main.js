@@ -1,5 +1,4 @@
 /*constructores*/
-/*Registro de cuenta nueva*/
 class InicioSesion {
     constructor(id, nombrePersona, correo, contrasena) {
         this.id = id,
@@ -38,8 +37,6 @@ function valorCuotas(Cuentas) {
     let resultadoCuota = crearValorCuotas + crearCuotaMensual;
     return resultadoCuota.toFixed();
 }
-
-
 /*constructores*/
 
 //capturar DOM
@@ -75,23 +72,3 @@ let balanceIngresado = sumarIngresos;
 let sumarGastos = 0;
 let pronosticoFinDe = 0;
 let saldoFinal = balanceIngresado - pronosticoFinDe;
-// setTimeout(() =>{
-
-// /* calcular total de Ingresos actual */
-// for(let losIngresos of listaIngresos){
-//     sumarIngresos += losIngresos.valorIngreso;
-// }
-// /* sumar ingresos al balance */
-
-// /* Calcular total de en Gastos */
-// for (let losGastos of listaCuentas){
-//     let totalGastosCuota = valorCuotas(losGastos)
-//     sumarGastos += Number(totalGastosCuota);
-// }
-
-// /* calcular diferencia entre balance actual y gastos del mes */
-// for (let pronostico of listaCuentas){
-//     let totalCuota = valorCuotas(pronostico);
-//     pronosticoFinDe += Number(totalCuota);
-// }
-// },1000)

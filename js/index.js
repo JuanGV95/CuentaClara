@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Actualizar saldo ingresado y saldo final
     sumarIngresos = listaIngresos.reduce((total, ingreso) => total + ingreso.valorIngreso, 0);
     balanceIngresado = sumarIngresos;
-    saldoFinal = balanceIngresado - pronosticoFinDe;
+    
    // Calcular total de gastos después de cargar las cuentas
    for (let losGastos of listaCuentas) {
     let totalGastosCuota = valorCuotas(losGastos);
@@ -106,15 +106,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     let totalCuota = valorCuotas(pronostico);
     pronosticoFinDe += Number(totalCuota);
   }
-    // Actualizar elementos del DOM con los valores correspondientes
+  saldoFinal = balanceIngresado - pronosticoFinDe;
+    // Actualizar elementos del DOM con los valores
     saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
     saldoActual.innerHTML = `$ ${balanceIngresado} USD`;
     dineroQueIngresa.innerHTML = `$${balanceIngresado} USD`;
     gastosTotal.innerHTML = `$ ${sumarGastos} USD`;
     totalAlFinal.innerHTML = `$ ${saldoFinal} USD`;
+    console.log(saldoFinal)
   });
-
-
+  
 
 
 //buscador

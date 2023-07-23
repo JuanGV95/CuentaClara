@@ -17,8 +17,26 @@ function ingresoOcacional (listaIngresos){
     
     listaIngresos.push(nuevoIngreso);
     localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
-
-    window.location.href = "ingresos.html"; 
+    
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: '¡Tu ingreso se ha agregado correctamente!'
+      })
+      setTimeout(()=>{
+        window.location.href = "ingresos.html";
+      },2000)
 }
 
 completarProcesoOcacional.addEventListener("click", () => {

@@ -1,3 +1,5 @@
+
+
 const cargarIngresos = async () => {
     const a = await fetch("../js/json/ingresos.json");
     const b = await a.json();
@@ -8,7 +10,7 @@ const cargarIngresos = async () => {
     }
     localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
     ingresosCreados(listaIngresos)
-    
+
 };
 
 
@@ -20,8 +22,8 @@ if (localStorage.getItem("listaIngresos")) {
     cargarIngresos();
 }
 
- /* calcular total de Ingresos actual */
- 
+/* calcular total de Ingresos actual */
+
 
 //fecha
 const hoy = new Date();
@@ -46,24 +48,38 @@ function ingresosCreados(array) {
     }
     array.forEach((mostrarIngresos) => {
         //manipular el DOM sin guardar en variable
-        document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`).addEventListener("click", () => {
-            console.log(`Eliminar producto`)
-            //borrar del DOM
-            let cardProducto = document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`)
-            cardProducto.remove()
-            //borrar del array
-            //encontramos objeto a eliminar
-            let productoEliminar = array.find((ingresos) => ingresos.id == mostrarIngresos.id)
-            console.log(productoEliminar)
-            //buscar indice
-            let posicion = array.indexOf(productoEliminar)
-            console.log(posicion)
-            array.splice(posicion, 1)
-            console.log(array)
-            //setear storage
-            localStorage.setItem("listaIngresos", JSON.stringify(array))
+        document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`).addEventListener("click", function (event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Eliminar ingreso',
+                text: "¿Estás seguro de esta acción? se eliminará de forma permanente.",
+                showCancelButton: true,
+                confirmButtonColor: '#E72252',
+                cancelButtonColor: '#40394A',
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Confirmar'
+            }).then((result) => {
+                if (result.isConfirmed){
+                console.log(`Eliminar producto`)
+                //borrar del DOM
+                let cardProducto = document.getElementById(`borrarCardIngreso${mostrarIngresos.id}`)
+                cardProducto.remove()
+                //borrar del array
+                //encontramos objeto a eliminar
+                let productoEliminar = array.find((ingresos) => ingresos.id == mostrarIngresos.id)
+                console.log(productoEliminar)
+                //buscar indice
+                let posicion = array.indexOf(productoEliminar)
+                console.log(posicion)
+                array.splice(posicion, 1)
+                console.log(array)
+                //setear storage
+                localStorage.setItem("listaIngresos", JSON.stringify(array))
+                window.location.href = "ingresos.html";
+                 }
+            })
         })
-        
+
     })
 
 }
