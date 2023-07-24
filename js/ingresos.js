@@ -1,7 +1,6 @@
 const hoy = new Date();
 fechaActual.innerHTML = hoy.toDateString();
 saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
-
 //llamamos el array de ingresos desde la API
 const cargarIngresos = async () => {
     const a = await fetch("../js/json/ingresos.json");
@@ -142,3 +141,19 @@ btnOrdenarIngresos.addEventListener("change", () => {
             break
     }
 })
+
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+    if (localStorage.getItem("listaIngresos")) {
+      listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
+    } else {
+      console.log("seteamos Lista de Ingresos");
+      await cargarIngresos();
+    }
+  // Actualizar saldo ingresado y saldo final
+  sumarIngresos = listaIngresos.reduce((total, ingreso) => total + ingreso.valorIngreso, 0);
+  balanceIngresado = sumarIngresos;
+  // Actualizar elementos del DOM con los valores
+  saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
+});

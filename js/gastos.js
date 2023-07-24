@@ -139,6 +139,20 @@ function buscarInfo(buscado, array){
     }
  })
 
+ 
+ document.addEventListener("DOMContentLoaded", async () => {
+    if (localStorage.getItem("listaIngresos")) {
+      listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
+    } else {
+      console.log("seteamos Lista de Ingresos");
+      await cargarIngresos();
+    }
+  // Actualizar saldo ingresado y saldo final
+  sumarIngresos = listaIngresos.reduce((total, ingreso) => total + ingreso.valorIngreso, 0);
+  balanceIngresado = sumarIngresos;
+  // Actualizar elementos del DOM con los valores
+  saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
+});
 
 
 
