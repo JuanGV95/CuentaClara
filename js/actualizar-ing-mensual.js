@@ -4,7 +4,7 @@ function baseMensual(listaIngresos) {
     sumarIngresos = valorIng + sumarIngresos;
     
     const nuevoIngreso = new Ingresos(listaIngresos.length > 0 ? listaIngresos[0].id : 1, "Sueldo Fijo", "mensual", Number(valorIng.value), "officeBagIcon.svg");
-
+  //modificamos la Actualizacion de ingreso ya que queremos que sea siempre el primer item del array (si se elimina se pierde el puesto)
     if (listaIngresos.length > 0) {
         listaIngresos[0] = nuevoIngreso;
     } else {

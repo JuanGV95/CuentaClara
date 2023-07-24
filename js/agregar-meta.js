@@ -34,11 +34,7 @@ function ahorros(listaCuentas) {
 
 }
 
-
-
 // Eventos 
-
-
 btnAgregarMeta.addEventListener("click", () => {
     listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
     console.log(listaCuentas)

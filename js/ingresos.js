@@ -1,5 +1,8 @@
+const hoy = new Date();
+fechaActual.innerHTML = hoy.toDateString();
+saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
 
-
+//llamamos el array de ingresos desde la API
 const cargarIngresos = async () => {
     const a = await fetch("../js/json/ingresos.json");
     const b = await a.json();
@@ -13,8 +16,6 @@ const cargarIngresos = async () => {
 
 };
 
-
-/* - - - - - - - - - - - -  */
 if (localStorage.getItem("listaIngresos")) {
     listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
 } else {
@@ -22,14 +23,7 @@ if (localStorage.getItem("listaIngresos")) {
     cargarIngresos();
 }
 
-/* calcular total de Ingresos actual */
-
-
-//fecha
-const hoy = new Date();
-fechaActual.innerHTML = hoy.toDateString();
-saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
-
+//mostramos en el DOM los Ingresos
 function ingresosCreados(array) {
     boxIngreso.innerHTML = ``
     for (let mostrarIngresos of array) {
@@ -87,19 +81,15 @@ ingresosCreados(listaIngresos);
 
 /* Buscador */
 function buscarInfoIngreso(buscado, array) {
-
-
     let busqueda = array.filter(
         (dato) =>
             dato.cuentaIngreso.toLowerCase().includes(buscado.toLowerCase()) || dato.nombreIngreso.toLowerCase().includes(buscado.toLowerCase())
     )
-
     busqueda.length == 0 ?
-        (resultadoBusquedaIngreso.innerHTML = `<h3>No hay coincidencias con la búsqueda ${buscado}</h3>`,
+        (resultadoBusquedaIngreso.innerHTML = `<h3>No hay coincidencias con la búsqueda: ${buscado}</h3>`,
             ingresosCreados(busqueda)) :
         (resultadoBusquedaIngreso.innerHTML = "", ingresosCreados(busqueda))
 }
-
 cajaIngreso.addEventListener("input", () => {
     buscarInfoIngreso(cajaIngreso.value, listaIngresos)
 })

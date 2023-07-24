@@ -1,6 +1,6 @@
 const hoy = new Date();
 fechaActual.innerHTML = hoy.toDateString();
-
+//cargamos las cuentas desde la API Local
 const cargarCuentas = async () => {
   const r = await fetch("./js/json/cuentas.json");
   const d = await r.json();
@@ -21,14 +21,12 @@ const cargarCuentas = async () => {
   mostrarGestionDom(d);
 
   saldoFinal = balanceIngresado - pronosticoFinDe;
-
 };
 
-//segunda carga
+//segunda carga de ingresos necesaria en el inicio
 const cargarIngresos = async () => {
   const a = await fetch("./js/json/ingresos.json");
   const b = await a.json();
-
   for (let ingreso of b) {
     let nuevoIngreso = new Ingresos(
       ingreso.id,
@@ -43,13 +41,13 @@ const cargarIngresos = async () => {
   for (let losIngresos of listaIngresos) {
     sumarIngresos += losIngresos.valorIngreso;
   }
-  // Actualizar saldo ingresado después de cargar los ingresos
+  // Actualizamos saldo ingresado después de cargar los ingresos
   balanceIngresado = sumarIngresos;
 
-  // Actualizar saldo final después de cargar los ingresos
+  // Actualizamos saldo final después de cargar los ingresos
   saldoFinal = balanceIngresado - pronosticoFinDe;
 };
-
+//funcion para mostrar las cuentas traidas por la API
 function mostrarGestionDom(array) {
   gestionDeGastos.innerHTML = ``;
   for (let nuevaCuenta of array) {
@@ -68,7 +66,7 @@ function mostrarGestionDom(array) {
     <button type="button"  class="btn btn-primary estilo-btnGestionar"data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="btnGestionar${nuevaCuenta.id}">Gestionar</button>`;
     gestionDeGastos.appendChild(gestionPendiente);
   }
-  /* Seccion Gestion pagos de las cuentas */
+  /* Seccion Gestion pagos de las cuentas perteneciente al Modal de bootstrap */
   array.forEach((nuevaCuenta) => {
     document.getElementById(`btnGestionar${nuevaCuenta.id}`).addEventListener("click", () => {
       modalGestionarCuenta.innerHTML = ``;
@@ -110,9 +108,8 @@ function mostrarGestionDom(array) {
     });
   });
 }
-
-
 // Evento que se ejecuta cuando el DOM ha sido completamente cargado
+// esto para que los datos se traigan correctamente y los calculos no fallen
 document.addEventListener("DOMContentLoaded", async () => {
   // Cargar las cuentas y los ingresos
   if (localStorage.getItem("listaCuentas")) {
@@ -128,8 +125,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("seteamos Lista de Ingresos");
     await cargarIngresos();
   }
-
-  // Mostrar la gestión de cuentas en el DOM después de cargar todos los datos
   mostrarGestionDom(listaCuentas);
 
 
@@ -168,7 +163,7 @@ function buscarInfoIndex(buscado, array) {
   );
 
   busqueda.length == 0
-    ? ((resultadoBusquedaIndex.innerHTML = `<h3>No hay coincidencias con la búsqueda ${buscado}</h3>`),
+    ? ((resultadoBusquedaIndex.innerHTML = `<h3>No hay coincidencias con la búsqueda: ${buscado}</h3>`),
       mostrarGestionDom(busqueda))
     : ((resultadoBusquedaIndex.innerHTML = ""), mostrarGestionDom(busqueda));
 }

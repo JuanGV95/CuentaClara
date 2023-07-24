@@ -33,8 +33,6 @@ function credito(listaCuentas) {
   },2000)
 }
 
-
-
 // Eventos 
 btnAgregarMetaCredito.addEventListener("click", () => {
     listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));

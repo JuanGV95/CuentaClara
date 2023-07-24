@@ -8,7 +8,6 @@ let checkBoxDefUno = document.getElementById("flexSwitchCheckDisabled");
 let checkBoxDefDos = document.getElementById("flexSwitchCheckChecked");
 //la funcion de los 3 siguientes if es para hacer dinamicos los botones
 // del switch en la pagina de crear otros gastos
-
 checkBoxDefUno.checked = true;
 checkBoxDefUno.addEventListener("click", function () {
   if (checkBoxDefUno.checked) {
@@ -129,5 +128,4 @@ btnAgregarOtro.addEventListener("click", () => {
   listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"))
   console.log(listaCuentas);
   otrasCuentas(listaCuentas);
-  
 });

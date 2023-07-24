@@ -1,3 +1,8 @@
+//fecha
+const hoy = new Date();
+fechaActual.innerHTML = hoy.toDateString(); 
+saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
+//Cargamos las Cuentas desde la API
 const cargarCuentas = async () =>{
     const r = await fetch(`../js/json/cuentas.json`);
     const d = await r.json()
@@ -18,12 +23,7 @@ if (localStorage.getItem("listaCuentas")) {
     cargarCuentas();
     
 }
-
-//fecha
-const hoy = new Date();
-fechaActual.innerHTML = hoy.toDateString(); 
-saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
-
+//Funcion para mostrar las cuentas en el DOM
 function gastosCreados(array) {
     boxGastos.innerHTML = ``
     for (let mostrarGastosCreados of array) {
@@ -40,6 +40,7 @@ function gastosCreados(array) {
     <h2 class="montoPago">$ ${mostrarGastosCreados.valor} USD</h2>`
         boxGastos.appendChild(crearGastoCard);
     }
+    //juntamos SweetAlert con la funcion para eliminar card y dar dinamismo
     array.forEach((mostrarGastosCreados) => {
         document.getElementById(`borrarCard${mostrarGastosCreados.id}`).addEventListener("click", function(event) {
             event.preventDefault()
@@ -68,11 +69,9 @@ function gastosCreados(array) {
            window.location.href = "gastos.html";
                 }
               })
-           
         })   
     })
 }
-
 gastosCreados(listaCuentas);
 
 
@@ -86,7 +85,7 @@ function buscarInfo(buscado, array){
     )
   
     busqueda.length == 0 ?
-    (resultadoBusqueda.innerHTML = `<h3>No hay coincidencias con la búsqueda ${buscado}</h3>`,
+    (resultadoBusqueda.innerHTML = `<h3>No hay coincidencias con la búsqueda: ${buscado}</h3>`,
     gastosCreados(busqueda)) :
     (resultadoBusqueda.innerHTML = "", gastosCreados(busqueda))
   }
