@@ -266,7 +266,7 @@
                     }
                 }
 
-                #btnGestionar {
+                .estilo-btnGestionar {
                     display: flex;
                     padding: 10px 16px;
                     justify-content: center;
@@ -287,4 +287,113 @@
             }
         }
     }
+
+    .modal-content {
+        background-color: $color-gris;
+        padding: 30px;
+        .modal-header {
+
+            border-bottom: none;
+
+            .modal-title {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+            }
+
+            .btn-close {
+                margin: 0;
+            }
+        }
+
+        .modal-body {
+            .cabecera-body-modal {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 20px;
+
+                .bloqueI-cabecera {
+
+                    h2 {
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        color: $color-grisesito;
+                        margin: 0;
+                    }
+                }
+
+                #cuadro-pendiente-modal {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex: 1 0 0;
+
+                    p {
+                        display: flex;
+                        width: 100px;
+                        padding: 10px 10px;
+                        align-items: center;
+                        color: $color-rojo;
+                        background-color: $color-rojofondo;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .bloque-info-modal {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .datos-bloque-izquierdo {
+                    ul {
+                        padding: 0;
+                        li {
+                            list-style: none;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+                .datos-bloque-derecho{
+                    ul {
+                        
+                        li {
+                            list-style: none;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .modal-footer{
+            border-top: none;
+            .btn-secondary{
+                background: transparent;
+                border: none;
+                color: $color-blanco;
+                border-radius: 100px;
+                &:hover{
+                    background-color: $color-grisesito;
+                }
+            }
+            .btn-primary{
+                background-color: $color-verde;
+                color: $color-negro;
+                border-radius: 100px;
+                border: none;
+                margin-left: 20px;
+            }
+        }
+    }
+
 }

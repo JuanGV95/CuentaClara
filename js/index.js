@@ -19,7 +19,7 @@ const cargarCuentas = async () => {
   }
   localStorage.setItem("listaCuentas", JSON.stringify(listaCuentas));
   mostrarGestionDom(d);
- 
+
   saldoFinal = balanceIngresado - pronosticoFinDe;
 
 };
@@ -43,13 +43,11 @@ const cargarIngresos = async () => {
   for (let losIngresos of listaIngresos) {
     sumarIngresos += losIngresos.valorIngreso;
   }
-// Actualizar saldo ingresado después de cargar los ingresos
+  // Actualizar saldo ingresado después de cargar los ingresos
   balanceIngresado = sumarIngresos;
 
   // Actualizar saldo final después de cargar los ingresos
   saldoFinal = balanceIngresado - pronosticoFinDe;
-
-  
 };
 
 function mostrarGestionDom(array) {
@@ -67,38 +65,81 @@ function mostrarGestionDom(array) {
     <div id="cuadroPendiente">
         <p>Pendiente</p>
     </div>
-    <button id="btnGestionar">Gestionar</button>`;
+    <button type="button"  class="btn btn-primary estilo-btnGestionar"data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="btnGestionar${nuevaCuenta.id}">Gestionar</button>`;
     gestionDeGastos.appendChild(gestionPendiente);
   }
+  /* Seccion Gestion pagos de las cuentas */
+  array.forEach((nuevaCuenta) => {
+    document.getElementById(`btnGestionar${nuevaCuenta.id}`).addEventListener("click", () => {
+      modalGestionarCuenta.innerHTML = ``;
+      let gestionEnModal = document.createElement("section");
+      gestionEnModal.className = "modal-body";
+      gestionEnModal.innerHTML = `
+      <section class="cabecera-body-modal">
+                        <article class="bloqueI-cabecera">
+                            <h2 id="nombre-de-cuenta-modal"> ${nuevaCuenta.nombreCuenta} </h2>
+                            <p id="tipo-de-cuenta-modal"> ${nuevaCuenta.cuenta}</p>
+                        </article>
+                        <article id="cuadro-pendiente-modal">
+                            <p>Pendiente</p>
+                        </article>
+                    </section>
+                    <section class="bloque-info-modal">
+                    <section class="datos-bloque-izquierdo">
+                        <ul>
+                            <li>Valor cuota</li>
+                            <li>Valor total</li>
+                            <li>Numero de cuotas</li>
+                        </ul>
+                    </section>
+                    <section class="datos-bloque-derecho" >
+                        <ul>
+                            <li id="valor-cuota-modal">$ ${valorCuotas(nuevaCuenta)} </li>
+                            <li id="valor-total-modal">$ ${nuevaCuenta.valor} </li>
+                            <li id="cuotas-modal">${nuevaCuenta.cuotas} </li>
+                        </ul>
+                    </section>
+                </section>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="terminar-pago">Marcar como pagado</button>
+                </div>
+            </div>`
+      modalGestionarCuenta.appendChild(gestionEnModal);
+    });
+  });
 }
 
 
 // Evento que se ejecuta cuando el DOM ha sido completamente cargado
 document.addEventListener("DOMContentLoaded", async () => {
-    // Cargar las cuentas y los ingresos
-    if (localStorage.getItem("listaCuentas")) {
-      listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
-    } else {
-      console.log("seteamos el Array listaCuentas");
-      await cargarCuentas();
-    }
-  
-    if (localStorage.getItem("listaIngresos")) {
-      listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
-    } else {
-      console.log("seteamos Lista de Ingresos");
-      await cargarIngresos();
-    }
-  
-    // Mostrar la gestión de cuentas en el DOM después de cargar todos los datos
-    mostrarGestionDom(listaCuentas);
-  
-    // Actualizar saldo ingresado y saldo final
-    sumarIngresos = listaIngresos.reduce((total, ingreso) => total + ingreso.valorIngreso, 0);
-    balanceIngresado = sumarIngresos;
-    
-   // Calcular total de gastos después de cargar las cuentas
-   for (let losGastos of listaCuentas) {
+  // Cargar las cuentas y los ingresos
+  if (localStorage.getItem("listaCuentas")) {
+    listaCuentas = JSON.parse(localStorage.getItem("listaCuentas"));
+  } else {
+    console.log("seteamos el Array listaCuentas");
+    await cargarCuentas();
+  }
+
+  if (localStorage.getItem("listaIngresos")) {
+    listaIngresos = JSON.parse(localStorage.getItem("listaIngresos"));
+  } else {
+    console.log("seteamos Lista de Ingresos");
+    await cargarIngresos();
+  }
+
+  // Mostrar la gestión de cuentas en el DOM después de cargar todos los datos
+  mostrarGestionDom(listaCuentas);
+
+
+
+  // Actualizar saldo ingresado y saldo final
+  sumarIngresos = listaIngresos.reduce((total, ingreso) => total + ingreso.valorIngreso, 0);
+  balanceIngresado = sumarIngresos;
+
+  // Calcular total de gastos después de cargar las cuentas
+  for (let losGastos of listaCuentas) {
     let totalGastosCuota = valorCuotas(losGastos);
     sumarGastos += Number(totalGastosCuota);
   }
@@ -107,15 +148,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     pronosticoFinDe += Number(totalCuota);
   }
   saldoFinal = balanceIngresado - pronosticoFinDe;
-    // Actualizar elementos del DOM con los valores
-    saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
-    saldoActual.innerHTML = `$ ${balanceIngresado} USD`;
-    dineroQueIngresa.innerHTML = `$${balanceIngresado} USD`;
-    gastosTotal.innerHTML = `$ ${sumarGastos} USD`;
-    totalAlFinal.innerHTML = `$ ${saldoFinal} USD`;
-    console.log(saldoFinal)
-  });
-  
+  // Actualizar elementos del DOM con los valores
+  saldoEnVivo.innerHTML = `$ ${balanceIngresado} USD`;
+  saldoActual.innerHTML = `$ ${balanceIngresado} USD`;
+  dineroQueIngresa.innerHTML = `$${balanceIngresado} USD`;
+  gastosTotal.innerHTML = `$ ${sumarGastos} USD`;
+  totalAlFinal.innerHTML = `$ ${saldoFinal} USD`;
+
+});
+
 
 
 //buscador

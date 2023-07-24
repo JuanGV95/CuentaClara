@@ -62,6 +62,9 @@ let cajaIndex = document.getElementById("caja");
 let cajaIngreso = document.getElementById("cajaIngreso");
 let actualizarSueldoFijo = document.getElementById("actualizar-sueldo-fijo");
 let saldoEnVivo = document.getElementById("saldo-en-vivo");
+let modalGestionarCuenta = document.getElementById("modal-gestionar-cuenta");
+
+
 
 /*Arrays*/
 /* let listaUsuarios = [];  EN CONTRUCCION*/

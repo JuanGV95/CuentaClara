@@ -248,7 +248,7 @@ body {
             align-items: center;
             color: #E72252;
             background-color: #AF1C401A; }
-        .main .gestion #cajaCuentas .gestionCuentas #btnGestionar {
+        .main .gestion #cajaCuentas .gestionCuentas .estilo-btnGestionar {
           display: flex;
           padding: 10px 16px;
           justify-content: center;
@@ -260,8 +260,77 @@ body {
           font-weight: 300;
           font-size: 14px;
           background-color: transparent; }
-          .main .gestion #cajaCuentas .gestionCuentas #btnGestionar:hover {
+          .main .gestion #cajaCuentas .gestionCuentas .estilo-btnGestionar:hover {
             background-color: #D9D9D980; }
+  .main .modal-content {
+    background-color: #40394A;
+    padding: 30px; }
+    .main .modal-content .modal-header {
+      border-bottom: none; }
+      .main .modal-content .modal-header .modal-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400; }
+      .main .modal-content .modal-header .btn-close {
+        margin: 0; }
+    .main .modal-content .modal-body .cabecera-body-modal {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px; }
+      .main .modal-content .modal-body .cabecera-body-modal .bloqueI-cabecera h2 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600; }
+      .main .modal-content .modal-body .cabecera-body-modal .bloqueI-cabecera p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        color: #D9D9D980;
+        margin: 0; }
+      .main .modal-content .modal-body .cabecera-body-modal #cuadro-pendiente-modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1 0 0; }
+        .main .modal-content .modal-body .cabecera-body-modal #cuadro-pendiente-modal p {
+          display: flex;
+          width: 100px;
+          padding: 10px 10px;
+          align-items: center;
+          color: #E72252;
+          background-color: #AF1C401A;
+          margin: 0; }
+    .main .modal-content .modal-body .bloque-info-modal {
+      display: flex;
+      width: 100%;
+      justify-content: space-between; }
+      .main .modal-content .modal-body .bloque-info-modal .datos-bloque-izquierdo ul {
+        padding: 0; }
+        .main .modal-content .modal-body .bloque-info-modal .datos-bloque-izquierdo ul li {
+          list-style: none;
+          padding: 10px 0px; }
+      .main .modal-content .modal-body .bloque-info-modal .datos-bloque-derecho ul li {
+        list-style: none;
+        padding: 10px 0px; }
+    .main .modal-content .modal-footer {
+      border-top: none; }
+      .main .modal-content .modal-footer .btn-secondary {
+        background: transparent;
+        border: none;
+        color: #FBFBFB;
+        border-radius: 100px; }
+        .main .modal-content .modal-footer .btn-secondary:hover {
+          background-color: #D9D9D980; }
+      .main .modal-content .modal-footer .btn-primary {
+        background-color: #7ECA9C;
+        color: #1C1427;
+        border-radius: 100px;
+        border: none;
+        margin-left: 20px; }
 
 .mainGastos {
   display: flex;
