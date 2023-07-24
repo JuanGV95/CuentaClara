@@ -2,7 +2,6 @@
 function baseMensual(listaIngresos) {
     let valorIng = document.getElementById("nombre-ingreso-oc");
     sumarIngresos = valorIng + sumarIngresos;
-    
     const nuevoIngreso = new Ingresos(listaIngresos.length > 0 ? listaIngresos[0].id : 1, "Sueldo Fijo", "mensual", Number(valorIng.value), "officeBagIcon.svg");
   //modificamos la Actualizacion de ingreso ya que queremos que sea siempre el primer item del array (si se elimina se pierde el puesto)
     if (listaIngresos.length > 0) {
@@ -10,9 +9,7 @@ function baseMensual(listaIngresos) {
     } else {
         listaIngresos.push(nuevoIngreso);
     }
-    
     localStorage.setItem("listaIngresos", JSON.stringify(listaIngresos));
-    
     const Toast = Swal.mixin({
       toast: true,
       position: 'top-end',
@@ -24,7 +21,6 @@ function baseMensual(listaIngresos) {
         toast.addEventListener('mouseleave', Swal.resumeTimer)
       }
     })
-    
     Toast.fire({
       icon: 'success',
       title: '¡Tu sueldo se ha actualizado correctamente!'

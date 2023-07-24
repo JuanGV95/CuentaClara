@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "cuenta": "Ahorro",
+        "nombreCuenta": "Viaje",
+        "cuotas": 20,
+        "valor": 600,
+        "interes": 12,
+        "imagen": "pigIcon.svg"
+    },
+    {
+        "id": 2,
+        "cuenta": "Credito",
+        "nombreCuenta": "Credito estudiantil",
+        "cuotas": 36,
+        "valor": 5000,
+        "interes": 12,
+        "imagen": "creditIcon.svg"
+    },
+    {
+        "id": 3,
+        "cuenta": "Otro",
+        "nombreCuenta": "Prestamo",
+        "cuotas": 14,
+        "valor": 1200,
+        "interes": 12,
+        "imagen": "dotsIcon.svg"
+    },
+    {
+        "id": 4,
+        "cuenta": "Ahorro",
+        "nombreCuenta": "Moto",
+        "cuotas": 36,
+        "valor": 3000,
+        "interes": 12,
+        "imagen": "pigIcon.svg"
+    }
+]

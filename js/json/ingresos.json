@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "cuentaIngreso": "Sueldo fijo",
+        "nombreIngreso": "Mensual",
+        "valorIngreso": 300,
+        "imagendeIngreso": "officeBagIcon.svg"
+    },
+    {
+        "id": 2,
+        "cuentaIngreso": "Trabajo freelance",
+        "nombreIngreso": "Mensual",
+        "valorIngreso": 100,
+        "imagendeIngreso": "dollaricon.svg"
+    },
+    {
+        "id": 3,
+        "cuentaIngreso": "Venta de servicios",
+        "nombreIngreso": "Mensual",
+        "valorIngreso": 200,
+        "imagendeIngreso": "dollaricon.svg"
+    },
+    {
+        "id": 4,
+        "cuentaIngreso": "Venta portatil",
+        "nombreIngreso": "Mensual",
+        "valorIngreso": 400,
+        "imagendeIngreso": "dollaricon.svg"
+    }
+]
